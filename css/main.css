@@ -276,13 +276,16 @@ body {
     background-color: white;
     border: 0.3vw dotted #448aca;
 }
-.hello img{
+.event-img{
     transform:rotate(-10deg);
-    width: 9vw;
-    display: flex;
-    position: relative; 
-    bottom: 15vh; 
-    left: 5vw;
+    position: absolute; 
+    bottom: 300px;
+    left: 15vw;
+    z-index: 2;
+
+}
+.event-img img{
+    width: 100px;
 }
 .select-menu{
     display:inline-flex;
@@ -1297,6 +1300,10 @@ width: 66.66666667%;
     width: 100vw;
     height: 100%;
 }
+.banner {position: relative; width: 100vw; height: 350px; margin:0 auto; padding:0; overflow: hidden;}
+.banner ul {position: absolute; margin: 0px; padding:0; list-style: none; }
+.banner ul li {float: left; width: 100vw; height: 350px; margin:0; padding:0;}
+
 .shop-box .shop-banner{
     width: 100vw;
     height: 350px;
@@ -1688,6 +1695,7 @@ width: 66.66666667%;
 	-ms-transition: all 0.3s cubic-bezier(1,.01,.32,1);
 	transition: all 0.3s cubic-bezier(1,.01,.32,1);	
 }
+
 
 /*고객지원-원격등*/
 .scroll-group{
