@@ -5,6 +5,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 html{
     scroll-behavior: smooth;
 }
@@ -1275,7 +1276,7 @@ width: 66.66666667%;
 
 
 /*쇼핑몰*/
-.shop{
+/* .shop{
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
@@ -1290,6 +1291,212 @@ width: 66.66666667%;
 }
 .shop-line7{
     padding-bottom: 50px;
+} */
+
+.shop-box{
+    width: 100vw;
+    height: 100%;
+}
+.shop-box .shop-banner{
+    width: 100vw;
+    height: 350px;
+    background-image: url(../img/shopping/shop-banner.jpeg);
+}
+.shop-box .shop-banner .text{
+    width: 25%;
+    height: 350px;
+    display: inline-flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 23%;
+}
+.shop-box .shop-banner .text h2{
+    padding: 20px 0;
+    text-align: left;
+    font-family: 'Gugi', cursive;
+    font-weight: 300;
+    font-size: 3em;
+    text-shadow: 0 0 5px #777;
+    color: #19b0bb;
+    -webkit-text-stroke: 0.5px #fff;
+}
+.shop-box .shop-banner .text h6{
+    line-height: 1.5em;
+    font-weight: 300;
+    padding-left: 20px;
+    color: #777;
+}
+.shop-wrapper .shop-line{
+    width: 100vw;
+    border-bottom :2px solid #19b0bb;
+    box-shadow: 0 2px 5px #777;
+    opacity: 0.7;
+}
+.shop-submenu{
+    width: 100vw;
+    height: 70px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+.shop-submenu ul li::before{
+    content: "ㅣ";
+    color: #19b0bb;
+}
+.shop-submenu ul li:nth-child(n+7):before{
+    color: #448aca
+}
+.shop-submenu ul li:first-child::before{
+    content: none;
+}
+.shop-submenu ul li a{
+    color: #19b0bb;
+    font-weight: 700;
+    padding: 0 3px 0 7px;
+}
+.shop-submenu ul li:nth-child(n+7) a{
+    color: #448aca;
+}
+.shop-icon{
+    width: 100vw;
+    height: 70px;
+    display: inline-flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.shop-icon div{
+    text-align: center;
+    padding: 0 10px;
+}
+.shop-icon img{
+    width: 30px;
+}
+.shop-s-title{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 60px;
+    text-align: center;
+}
+.shop-s-title p{
+    width: 400px;
+    height: 25px;
+    padding: 10px 10px;
+    background: #19b0bb;
+    color: white;
+    border-radius: 30px;
+}
+.shop-list{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 300px;
+    padding-bottom: 100px;
+}
+.shop-list2{
+    height: 100%;
+    padding-bottom:20px;
+}
+.shop-list img{
+    width: 270px;
+    height: auto;
+    margin: 0 20px;
+    box-shadow: 2px 2px 7px #777;
+}
+.shop-list .xs-text{
+    color: #19b0bb;
+    font-weight: 700;
+}
+.shop-list .hover-icon{
+    background: #cde3f7;
+    width: 270px;
+    height: 193px;
+    position: absolute;
+    margin:  0 20px;
+    text-align: center;
+    opacity: 0;
+}
+.shop-list .hover-icon i{
+    padding: 25% 0;
+    z-index: 2;
+    font-size: 5em;
+    color: #448aca;
+    transform: scale(1);
+    transition: all .3s linear;
+}
+.shop-list a:hover .hover-icon{
+    opacity: 1;
+}
+.shop-list a:hover .hover-icon i{
+    font-size: 3em;
+    transform: scale(1);
+}
+
+.shop-list .a-box{
+    display: inline-flex;
+}
+.shop-list a:hover img{
+    opacity: 0.3;
+}
+.shop-list .section-4{
+    display: inline-flex;
+    width: 100vw;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+}
+.shop-list .section-4 div{
+    width: 20%;
+}
+.shop-list .section-4 img{
+    width: 250px;
+    margin: 0 10px;
+}
+.shop-list .section-4 .hover-icon{
+    width: 250px;
+    height: 90px;
+    margin: 0 10px;
+}
+.shop-list .section-4 .hover-icon i{
+    padding: 10% 0;
+    z-index: 2;
+    font-size: 3em;
+
+}
+.shop-list .section-4 .a-box-title{
+    width: 230px;
+    height: 100px;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.shop-list .section-4 .a-box-title h2{
+    padding-bottom: 20px;
+    font-size: 1.5em;
+}
+.a-box-flex{
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.a-box-flex img{
+    margin: 0 45px;
+}
+.a-box-flex .hover-icon{
+    margin: 0 45px;
+}
+.a-box-flex>div{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    padding-bottom: 20px;
+}
+.a-box-flex>div>h2{
+    padding-right: 20px;
 }
 
 /*fixed banner*/
