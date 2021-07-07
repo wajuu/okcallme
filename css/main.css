@@ -1300,9 +1300,9 @@ width: 66.66666667%;
     width: 100vw;
     height: 100%;
 }
-.banner {position: relative; width: 100vw; height: 350px; margin:0 auto; padding:0; overflow: hidden;}
-.banner ul {position: absolute; margin: 0px; padding:0; list-style: none; }
-.banner ul li {float: left; width: 100vw; height: 350px; margin:0; padding:0;}
+.shop-top-banner {position: relative; width: 100vw; height: 350px; margin:0 auto; padding:0; overflow: hidden;}
+.shop-top-banner ul {position: absolute; margin: 0px; padding:0; list-style: none; }
+.shop-top-banner ul li {float: left; width: 100vw; height: 350px; margin:0; padding:0;}
 
 .shop-box .shop-banner{
     width: 100vw;
