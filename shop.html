@@ -22,12 +22,18 @@
 
     <link rel="stylesheet" type="text/css" media="screen and (max-width:766px)" href="./css/phone.css">
     <link rel="stylesheet" type="text/css" media="screen and (min-width:767px)" href="./css/main.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="./js/motion.js"></script>
     <script src="https://kit.fontawesome.com/115e3e852e.js" crossorigin="anonymous"></script>
+
+
+
+
+
 
 
     <title>콜신져</title>
@@ -96,14 +102,31 @@
         <div id="container">
             <div class="shop-box">
                 <!-- 쇼핑몰 배너 -->
-                <div class="shop-banner">
+                
+                <div class="banner">
+                    <ul>
+                        <li>
+                            <div class="shop-banner">
+                                <div class="text">
+                                    <h2 class="xl-text">콜신져에서 <br> &nbsp;&nbsp;&nbsp;구매해보세요!</h2>
+                                    <h6 class="s-text">"매장에서 필요한 주변장치,<br>
+                                    콜신져 이용료와 마일리지 적립까지" <br><br>
+                                콜신져 홈페이지에서 한 번에 이용해보세요 </h6>
+                                </div>
+                            </div>
+                        </li>
+                        <li><img src="./img/shopping/shop-banner.jpeg" width="100%" height="auto"></li>
+                        <li><img src="./img/shopping/shop-banner.jpeg" width="100%" height="auto"></li> 
+                    </ul>
+                </div>
+                <!-- <div class="shop-banner">
                     <div class="text">
                         <h2 class="xl-text">콜신져에서 <br> &nbsp;&nbsp;&nbsp;구매해보세요!</h2>
                         <h6 class="s-text">"매장에서 필요한 주변장치,<br>
                         콜신져 이용료와 마일리지 적립까지" <br><br>
                     콜신져 홈페이지에서 한 번에 이용해보세요 </h6>
                     </div>
-                </div>
+                </div> -->
                 <!-- 본문 -->
 
                 <div class="shop-wrapper">
@@ -250,7 +273,6 @@
 
     <!-- 고정 사이드 메뉴 -->
     <div class="go-top"></div>
-    <!-- <div class="support-menu">
         <table class="scroll-group" id="scroll-group">
             <tr>
                 <td>
@@ -351,6 +373,7 @@
     </div>
 
     <!-- javascript -->
+    <div id="script" style="display: none;">
     <!--go-up-->
     <script>
         $(window).scroll(function () {
@@ -368,134 +391,38 @@ $('.go-top').click(function(){//위로가기 버튼을 클릭했을때
   }, 800);
 });
     </script>
-    <div id="script" style="display: none;">
-        <!-- 고객지원아이콘 -->
-        <script>
-            function myFunction() {
-                var x = document.getElementById("hidden-scroll");
-                if (x.style.display === "none") {
-                x.style.display = "block";
-                } 
-                else {
-                x.style.display = "none";
-                }
-            }
-            </script>
+
         <!-- rolling banner -->
-        <script>
-            //current position
-            var pos = 0;
-            //number of slides
-            var totalSlides = $('#slider-wrap ul li').length;
-            //get the slide width
-            var sliderWidth = $('#slider-wrap').width();
-
-
-            $(document).ready(function () {
-
-
-                /*****************
-                 BUILD THE SLIDER
-                *****************/
-                //set width to be 'x' times the number of slides
-                $('#slider-wrap ul#slider').width(sliderWidth * totalSlides);
-
-                //next slide 	
-                $('#next').click(function () {
-                    slideRight();
-                });
-
-                //previous slide
-                $('#previous').click(function () {
-                    slideLeft();
-                });
-
-
-
-                /*************************
-                 //*> OPTIONAL SETTINGS
-                ************************/
-                //automatic slider
-                var autoSlider = setInterval(slideRight, 3000);
-
-                //for each slide 
-                $.each($('#slider-wrap ul li'), function () {
-
-                    //create a pagination
-                    var li = document.createElement('li');
-                    $('#pagination-wrap ul').append(li);
-                });
-
-                //counter
-                countSlides();
-
-                //pagination
-                pagination();
-
-                //hide/show controls/btns when hover
-                //pause automatic slide when hover
-                $('#slider-wrap').hover(
-                    function () {
-                        $(this).addClass('active');
-                        clearInterval(autoSlider);
-                    },
-                    function () {
-                        $(this).removeClass('active');
-                        autoSlider = setInterval(slideRight, 3000);
-                    }
-                );
-
-
-
-            }); //DOCUMENT READY
-
-
-
-            /***********
-             SLIDE LEFT
-            ************/
-            function slideLeft() {
-                pos--;
-                if (pos == -1) {
-                    pos = totalSlides - 1;
+   
+        <script language="JavaScript">
+            $(document).ready(function() {
+                var $banner = $(".banner").find("ul");
+        
+                var $bannerWidth = $banner.children().outerWidth();//이미지의 폭
+                var $bannerHeight = $banner.children().outerHeight(); // 높이
+                var $length = $banner.children().length;//이미지의 갯수
+                var rollingId;
+        
+                //정해진 초마다 함수 실행
+                rollingId = setInterval(function() { rollingStart(); }, 4000);//다음 이미지로 롤링 애니메이션 할 시간차
+            
+                function rollingStart() {
+                    $banner.css("width", $bannerWidth * $length + "px");
+                    $banner.css("height", $bannerHeight + "px");
+                    //alert(bannerHeight);
+                    //배너의 좌측 위치를 옮겨 준다.
+                    $banner.animate({left: - $bannerWidth + "px"}, 1500, function() { //숫자는 롤링 진행되는 시간이다.
+                        //첫번째 이미지를 마지막 끝에 복사(이동이 아니라 복사)해서 추가한다.
+                        $(this).append("<li>" + $(this).find("li:first").html() + "</li>");
+                        //뒤로 복사된 첫번재 이미지는 필요 없으니 삭제한다.
+                        $(this).find("li:first").remove();
+                        //다음 움직임을 위해서 배너 좌측의 위치값을 초기화 한다.
+                        $(this).css("left", 0);
+                        //이 과정을 반복하면서 계속 롤링하는 배너를 만들 수 있다.
+                    });
                 }
-                $('#slider-wrap ul#slider').css('left', -(sliderWidth * pos));
-
-                //*> optional
-                countSlides();
-                pagination();
-            }
-
-
-            /************
-             SLIDE RIGHT
-            *************/
-            function slideRight() {
-                pos++;
-                if (pos == totalSlides) {
-                    pos = 0;
-                }
-                $('#slider-wrap ul#slider').css('left', -(sliderWidth * pos));
-
-                //*> optional 
-                countSlides();
-                pagination();
-            }
-
-
-
-
-            /************************
-             //*> OPTIONAL SETTINGS
-            ************************/
-            function countSlides() {
-                $('#counter').html(pos + 1 + ' / ' + totalSlides);
-            }
-
-            function pagination() {
-                $('#pagination-wrap ul li').removeClass('active');
-                $('#pagination-wrap ul li:eq(' + pos + ')').addClass('active');
-            }
+            }); 
+        //-->  
         </script>
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     </div>
