@@ -1313,6 +1313,7 @@ width: 66.66666667%;
     width: 100vw;
     height: 350px;
     background-image: url(../img/shopping/shop-banner.jpeg);
+    background-size: cover;
 }
 .shop-box .shop-banner .text{
     width: 25%;
