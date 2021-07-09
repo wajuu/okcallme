@@ -1478,6 +1478,7 @@ width: 66.66666667%;
     width: 100vw;
     height: 100%;
     padding-bottom: 100px;
+    margin-top: 20px;
 }
 .shop-list2{
     height: 100%;
@@ -1485,6 +1486,7 @@ width: 66.66666667%;
 }
 .shop-list3{
     padding-bottom: 10px;
+    display: inline-block;
 }
 .shop-list img{
     width: 270px;
