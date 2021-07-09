@@ -88,6 +88,7 @@ body {
 }
 #container{
     padding-top: 90px;
+    height: 100%;
     display: inline-block;
 }
 /*header*/
@@ -690,6 +691,12 @@ body {
 .content-table .screen{
     padding: 20px 0;
     width: 30vw;
+}
+.main-line3{
+    border-bottom: 2px solid #dedede;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 0;
 }
 .main-line2{
     border-top: 2px solid #dedede;
@@ -1303,7 +1310,6 @@ width: 66.66666667%;
 
 .shop-box{
     width: 100vw;
-    height: 100%;
 }
 .shop-top-banner {position: relative; width: 100vw; height: 350px; margin:0 auto; padding:0; overflow: hidden;}
 .shop-top-banner ul {position: absolute; margin: 0px; padding:0; list-style: none; }
@@ -1393,10 +1399,10 @@ width: 66.66666667%;
 }
 .shop-title-box{
     display: inline-flex;
-    width: 100vw;
+    width: 80vw;
     height: 60px;
     align-items: center;
-    padding: 30px 0;
+    padding-bottom: 30px;
 }
 .shop-title-box div:nth-child(2){
     display: inline-flex;
@@ -1410,9 +1416,9 @@ width: 66.66666667%;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 30%;
+    width: 40%;
     height: 60px;
-    padding-left: 12%;
+    padding-left: 8%;
     text-align: center;
 }
 .shop-s-title{
@@ -1420,7 +1426,7 @@ width: 66.66666667%;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 60px;
+    height: 150px;
     text-align: center;
 }
 
@@ -1438,7 +1444,7 @@ width: 66.66666667%;
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 300px;
+    height: 100%;
     padding-bottom: 100px;
 }
 .shop-list2{
@@ -1446,7 +1452,7 @@ width: 66.66666667%;
     padding-bottom:20px;
 }
 .shop-list3{
-    margin: 100px 0;
+    padding-bottom: 10px;
 }
 .shop-list img{
     width: 270px;
@@ -1547,7 +1553,6 @@ width: 66.66666667%;
 .shop-s-title-left{
     justify-content: flex-end;
     height: 100px;
-    margin: 0;
 }
 .shop-s-title-left p{
     margin-left: 150px;
@@ -1555,10 +1560,10 @@ width: 66.66666667%;
 .section-list{
     display: inline-flex;
     width: 100vw;
-    height: 500px;
+    height: 100%;
     justify-content: center;
     align-items: center;
-    margin: 50px 0;
+    padding-top: 1px;
 }
 .a-box-list>div{
     display: inline-flex;
@@ -1597,13 +1602,46 @@ width: 66.66666667%;
     box-shadow: 2px 2px 7px #777;
     padding: 0 20px;
 }
-.a-box-list .title-area .basket-icon{
+.a-box-list .title-area .basket-icon, .count-icon{
     width: 280px;
     height: 200px;
     display: inline-flex;
     align-items: flex-end;
     justify-content: flex-end;
     position: absolute;
+}
+.count-icon{
+    padding-bottom: 80px;
+    padding-left: 30px;
+}
+.count-icon div{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.count-icon .count-box {
+    background-color: #dedede;
+    border-radius: 50px;
+    width: 150px;
+    height: 50px;
+    margin: 0 20px;
+}
+.count-icon .count-box span{
+    width: 30%;
+    padding-left: 20px;
+}
+.count-icon .count-box button{
+    background-color: #dedede;
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    font-size: 1.5em;
+}
+.count-icon .count-box button .numBox{
+    background-color: #dedede;
+    font-size: 2em;
+    text-align: center;
 }
 .a-box-list .title-area .basket-icon div{
     background-color: #19b0bb;
@@ -1629,8 +1667,29 @@ width: 66.66666667%;
 .a-box-list .price{
     padding-top: 50px;
 }
+.shop-detail{
+    display: inline-flex;
+    flex-direction: column;
+}
 
-
+.shop-detail .title-area{
+    height: 260px;
+    width: 500px;
+}
+.shop-detail .title-area .basket-icon, .count-icon{
+    width: 500px;
+    height: 260px;
+}
+.shop-detail .detail-pic{
+    padding-top: 50px;
+}
+.shop-detail .detail-pic p{
+    padding-left: 20px;
+}
+.shop-detail .detail-pic img{
+    width: 880px;
+    margin-top: 50px;
+}
 /*fixed banner*/
 
 .go-top{
