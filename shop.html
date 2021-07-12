@@ -22,6 +22,7 @@
 
     <link rel="stylesheet" type="text/css" media="screen and (max-width:766px)" href="./css/phone.css">
     <link rel="stylesheet" type="text/css" media="screen and (min-width:767px)" href="./css/main.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,7 +73,7 @@
                                 <li><a class="s-text" href="./1-2.html">다른 프로그램</a></li>
                             </ul>
                         </li>
-                        <li class="main-menu"><a href="./2-1.html">사용방법</a>
+                        <li class="main-menu"><a href="./2-2.html">사용방법</a>
                             <ul class="dropdown">
                                 <!-- <li><a class="s-text" href="./2-1.html">무료체험 방법</a></li> -->
                                 <li><a class="s-text" href="./2-2.html">요금 및 할인</a></li>
@@ -109,29 +110,58 @@
                 <!-- 쇼핑몰 배너 -->
                 
                 <div class="shop-top-banner">
-                    <ul>
-                        <li>
-                            <div class="shop-banner">
-                                <div class="text">
-                                    <h2 class="xl-text">콜신져에서 <br> &nbsp;&nbsp;&nbsp;구매해보세요!</h2>
-                                    <h6 class="s-text">"매장에서 필요한 주변장치,<br>
-                                    콜신져 이용료와 마일리지 적립까지" <br><br>
-                                콜신져 홈페이지에서 한 번에 이용해보세요 </h6>
-                                </div>
+                    <div class="swiper-container" style="height: 350px;">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide shop-banner">
+                            <div class="text">
+                                <h2 class="xl-text">콜신져에서 <br> &nbsp;&nbsp;&nbsp;구매해보세요!</h2>
+                                <h6 class="s-text">"매장에서 필요한 주변장치,<br>
+                                콜신져 이용료와 마일리지 적립까지" <br><br>
+                            콜신져 홈페이지에서 한 번에 이용해보세요 </h6>
                             </div>
-                        </li>
-                        <li><img src="./img/shopping/shop-banner.jpeg" width="100%" height="auto"></li>
-                        <li><img src="./img/shopping/shop-banner.jpeg" width="100%" height="auto"></li> 
-                    </ul>
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="./img/shopping/shop-banner.jpeg" width="100%" height="auto">
+                          </div>
+                          <div class="swiper-slide">
+                            <img src="./img/shopping/shop-banner.jpeg" width="100%" height="auto">
+                          </div>
+                            
+                            ...
+                    
+                        </div>
+                          <!-- If we need pagination -->
+                          <div class="swiper-pagination"></div>
+                    
+                          <!-- If we need navigation buttons -->
+                          <div class="swiper-button-prev"></div>
+                          <div class="swiper-button-next"></div>
+                          
+                      </div>                  
                 </div>
-                <!-- <div class="shop-banner">
-                    <div class="text">
-                        <h2 class="xl-text">콜신져에서 <br> &nbsp;&nbsp;&nbsp;구매해보세요!</h2>
-                        <h6 class="s-text">"매장에서 필요한 주변장치,<br>
-                        콜신져 이용료와 마일리지 적립까지" <br><br>
-                    콜신져 홈페이지에서 한 번에 이용해보세요 </h6>
-                    </div>
-                </div> -->
+               
+                <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+                <script>
+                    var mySwiper = new Swiper('.swiper-container', {
+                // 슬라이드를 버튼으로 움직일 수 있습니다.
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+                    
+                // 현재 페이지를 나타내는 점이 생깁니다. 클릭하면 이동합니다.
+                pagination: {
+                    el: '.swiper-pagination',
+                    type: 'bullets',
+                },
+                    
+                // 3초마다 자동으로 슬라이드가 넘어갑니다. 1초 = 1000
+                autoplay: {
+                    delay: 3000,
+                },
+                });
+                </script>
+
                 <!-- 본문 -->
 
                 <div class="shop-wrapper">
@@ -219,7 +249,9 @@
                             <div class="a-box a-box-flex">
                                 <div>
                                     <h2>영수증 프린터</h2>
-                                    <h6 class="xs-text">더 보러가기 &nbsp;<i class="fas fa-chevron-circle-right"></i></h6>
+                                    <a href="">
+                                        <h6 class="xs-text">더 보러가기 &nbsp;<i class="fas fa-chevron-circle-right"></i></h6>
+                                    </a>
                                 </div>
                                 <a href="./shop-print.html">
                                     <div class="hover-icon"><i class="fas fa-search"></i></div>
@@ -228,7 +260,9 @@
                             <div class="a-box a-box-flex">
                                 <div>
                                     <h2>무선 카드체크기</h2>
-                                    <h6 class="xs-text">더 보러가기 &nbsp;<i class="fas fa-chevron-circle-right"></i></h6>
+                                    <a href="">
+                                        <h6 class="xs-text">더 보러가기 &nbsp;<i class="fas fa-chevron-circle-right"></i></h6>
+                                    </a>
                                 </div>
                                 <a href="./shop-card.html">
                                     <div class="hover-icon"><i class="fas fa-search"></i></div>
@@ -237,7 +271,9 @@
                             <div class="a-box a-box-flex">
                                 <div>
                                     <h2>모니터 일체형 POS</h2>
-                                    <h6 class="xs-text">더 보러가기 &nbsp;<i class="fas fa-chevron-circle-right"></i></h6>
+                                    <a href="">
+                                        <h6 class="xs-text">더 보러가기 &nbsp;<i class="fas fa-chevron-circle-right"></i></h6>
+                                    </a>
                                 </div>
                                 <a href="./shop-pos.html">
                                     <div class="hover-icon"><i class="fas fa-search"></i></div>
@@ -278,61 +314,8 @@
 
     <!-- 고정 사이드 메뉴 -->
     <div class="go-top"></div>
-        <table class="scroll-group" id="scroll-group">
-            <tr>
-                <td>
-                    <table class="scroll-group">
-                        <tr>
-                            <td class="scroll" id="scroll1">
-                                <a target="_blank" href="https://m.blog.naver.com/PostList.naver?blogId=okcallme_com">
-                                    <img src="./img/blog.png" style="width: 35px;" alt="blog">
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="scroll" id="scroll2">
-                                <a onclick="alert('회원가입 후 이용가능합니다');" style="cursor:pointer">
-                                    <img src="./img/shopping.png" style="width: 35px;" alt="shop">
-                                </a>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="scroll" id="scroll3" onclick="myFunction()">
-                                <a style="cursor:pointer">
-                                    <img src="./img/human.png" style="width: 45px;" alt="support">
-                                    <p class="point-text">?</p>
-                                </a>
-                                <table id="hidden-scroll">
-                                    <tr>
-                                        <td class="scroll hidden-scroll">
-                                            <a onclick="alert('회원가입 후 이용가능합니다');" style="cursor:pointer">
-                                                원격<br>지원
-                                            </a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="scroll hidden-scroll">
-                                            <a onclick="alert('회원가입 후 이용가능합니다');" style="cursor:pointer">이체<br>신청</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="scroll hidden-scroll">
-                                            <a onclick="alert('회원가입 후 이용가능합니다');" style="cursor:pointer">결제<br>내역</a>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td class="scroll hidden-scroll">
-                                            <a href="./support4.html" style="cursor:pointer">입금<br>문의</a>
-                                        </td>
-                                    </tr>
-                                </table>
-                            </td>
-                        </tr>
-                    </table>
-                </td>
-            </tr>
-        </table>
-    </div> -->
+    
+    </div>
     <!-- footer -->
     <div id="foot">
         <footer>
