@@ -121,7 +121,7 @@ body {
     background-color: #fff;
     border-bottom: 1px solid #dedede;
     box-shadow: 0 0 5px 0 #dedede;
-    z-index: 2;
+    z-index: 4;
 }
 .admin{
     display: inline-block;
@@ -155,7 +155,6 @@ body {
 }
 .logo-box img{
     height: 100%;
-    padding: 5px 10px;
 }
 .nav{
     height: 60px;
@@ -1323,22 +1322,6 @@ width: 66.66666667%;
 
 
 /*쇼핑몰*/
-/* .shop{
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: 50px 0;
-}
-.shop .m-text{
-    padding: 10px 0;
-}
-.shop table{
-    border-spacing: 0;
-    border-collapse: collapse;
-}
-.shop-line7{
-    padding-bottom: 50px;
-} */
 
 .shop-box{
     width: 100vw;
@@ -1383,6 +1366,7 @@ width: 66.66666667%;
     width: 100vw;
     height: max-content;
     flex-direction: column;
+    margin-bottom: 100px;
 }
 .shop-wrapper .shop-line{
     width: 100vw;
@@ -1431,8 +1415,9 @@ width: 66.66666667%;
 }
 .shop-title-box{
     display: inline-flex;
-    width: 80vw;
+    width: 100vw;
     height: 60px;
+    justify-content:center;
     align-items: center;
     padding-bottom: 30px;
 }
@@ -1448,9 +1433,8 @@ width: 66.66666667%;
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 40%;
+    width: 30%;
     height: 60px;
-    padding-left: 8%;
     text-align: center;
 }
 .shop-s-title{
@@ -1463,7 +1447,7 @@ width: 66.66666667%;
 }
 
 .shop-s-title p{
-    width: 400px;
+    width: 300px;
     height: 25px;
     padding: 10px 10px;
     background: #19b0bb;
@@ -1588,9 +1572,6 @@ width: 66.66666667%;
     justify-content: flex-end;
     height: 100px;
 }
-.shop-s-title-left p{
-    margin-left: 150px;
-}
 .section-list{
     display: inline-flex;
     width: 100vw;
@@ -1636,7 +1617,7 @@ width: 66.66666667%;
     box-shadow: 2px 2px 7px #777;
     padding: 0 20px;
 }
-.a-box-list .title-area .basket-icon, .count-icon{
+.a-box-list .title-area .basket-icon {
     width: 280px;
     height: 200px;
     display: inline-flex;
@@ -1644,10 +1625,19 @@ width: 66.66666667%;
     justify-content: flex-end;
     position: absolute;
 }
-.count-icon{
-    padding-bottom: 80px;
-    padding-left: 30px;
+.a-box-list .title-area .count-icon{
+    display: inline-flex;
+    align-items: flex-end;
+    position: absolute;
+    width: 450px;
+    height: 175px;
+    z-index: 3;
 }
+.a-box-list .title-area .buy-icon{
+    width: 220px;
+    z-index: 3;
+}
+
 .count-icon div{
     display: inline-flex;
     justify-content: center;
@@ -1670,26 +1660,36 @@ width: 66.66666667%;
     border-radius: 50px;
     width: 50px;
     height: 50px;
-    font-size: 1.5em;
+    font-size: 1.2em;
 }
 .count-icon .count-box button .numBox{
     background-color: #dedede;
     font-size: 2em;
     text-align: center;
 }
+
+.a-box-list .title-area .basket-icon a{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+}
 .a-box-list .title-area .basket-icon div{
     background-color: #19b0bb;
     display: inline-flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     border-radius: 50px;
-    margin-bottom: 20px;
 }
 .a-box-list .title-area .basket-icon i{
-    font-size: 2em;
+    font-size: 1.5em;
     color: #fff;
+}
+.a-box-list .title-area .basket-icon span{
+    font-size: 0.8em;
+    padding-bottom: 10px;
 }
 .a-box-list .title-area .m-text{
     font-weight: 900;
@@ -1713,6 +1713,10 @@ width: 66.66666667%;
 .shop-detail .title-area .basket-icon, .count-icon{
     width: 500px;
     height: 260px;
+}
+.shop-detail .title-area .buy-icon{
+    height: 130px;
+    width: 500px;
 }
 .shop-detail .detail-pic{
     padding-top: 50px;
