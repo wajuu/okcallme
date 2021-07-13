@@ -103,6 +103,7 @@ ul li{display: inline-block;}
     font-weight: 900;
     font-size: 1.3em;
 }
+
 body {
     font-family: "NEXON Lv1 Gothic OTF", normal;
     width: 100vw;
@@ -1683,6 +1684,10 @@ width: 66.66666667%;
     height: 45px;
     border-radius: 50px;
 }
+.a-box-list .title-area .counsil-icon div{
+    width: 160px;
+    margin-bottom: 15px;
+}
 .a-box-list .title-area .basket-icon i{
     font-size: 1.5em;
     color: #fff;
@@ -2051,21 +2056,32 @@ footer .remoteFooter{
     color: white;
     font-weight: bold;
 }
-
+.download-popup{
+    width: 485px;
+    margin: 5px;
+    padding-bottom: 30px;
+    border: 2px solid #448aca;
+}
 .download-box{
-    width: 100vw;
+    width: 485px;
     display: inline-flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
     padding-top: 20px;
 }
+.download-box img{
+    width: 480px;
+    height: auto;
+}
 .down-title{
-    width: 70vw;
+    font-size: 2.5em;
+    width: 350px;
     text-align: center;
     margin: 20px 0;
 }
 .download{
+    font-size: 2em;
     width: 200px;
     margin: 5px 0;
     padding: 10px;
@@ -2078,6 +2094,7 @@ footer .remoteFooter{
     padding-top: 10px;
 }
 .download-text .exp1{
+    font-size: 1.5em;
     text-align: center;
     color: red;
 }
