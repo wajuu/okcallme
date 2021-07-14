@@ -84,7 +84,7 @@
                             <ul class="dropdown">
                                 <li><a class="s-text" href="../4-1.html">배달앱/주문대행</a></li>
                                 <li><a class="s-text" href="../4-2.html">배달 공공앱</a></li>
-                                <li><a class="s-text" href="../4-2.html">프랜차이즈 제휴사</a></li>
+                                <li><a class="s-text" href="../4-3.html">프랜차이즈 제휴사</a></li>
                             </ul>
                         </li>
                         <li class="main-menu"><a href="../support.html">고객센터</a></li>
@@ -149,7 +149,7 @@
                     <div class="shop-list shop-list3 shop-detail">
                         <div class="section-3 section-list">
                             <div class="a-box a-box-list a-box-detail">
-                                <a  class="pic-area" href="../shop/product1-2.html">
+                                <a  onclick="openDetail();" class="pic-area" href="#">
                                     <div>
                                         <div class="hover-icon hover-icon2"><i class="fas fa-search"></i></div>
                                             <img src="../img/shopping/shop-list-01.png" alt="shop">
@@ -216,7 +216,39 @@
                                 <p class="m-text">제품상세</p>
                             </div>
                             <div class="main-line3"></div>
-                            <img src="../img/shop-details/콜스타-USB-1회선.png" alt="details">
+                            <img src="../img/shop-details/콜스타-IP.png" alt="details">
+                        </div>
+                        <div class="detail-info">
+                            <div>
+                                <p class="m-text">배송정보</p>        
+                            </div>
+                            <div>
+                                <p class="m-text contents" style="color: #424242;">	
+                                    결제 확인후 택배로 배송하게됩니다. <br>
+                                    A/S시에는 탁송료가 부가됩니다.</p>
+                            </div>
+                            <div class="main-line3"></div>
+                        </div>
+                        <div class="detail-info">
+                            <div>
+                                <p class="m-text">결제정보</p>        
+                            </div>
+                            <div>
+                                <p class="m-text pay-info">무통장입금</p>
+                                <p class="m-text contents2" style="color: #424242;">	
+                                    아래에 은행계좌로 인터넷이나 폰뱅킹, 또는 직접 은행에 가시어 결제를 하시면 됩니다.</p>
+                            </div>
+                            <div>
+                                <p class="m-text pay-info">은행명 / 계좌번호</p>
+                                <p class="m-text contents2" style="color: #424242;">	
+                                    <strong>예금주 : 꿈과행복 <br> 농협 301-0057-4221-41</strong></p>
+                            </div>
+                            <div>
+                                <p class="m-text contents2" style="color: #424242;">	
+                                    ※ 무통장으로 입금하실때에는 "보내시는 분"에는 꼭 홈페이지에 가입되신 실명 또는 아이디로 입금하여 주시기 바라며,
+부득이하게 다른분 이름으로 입금하실때에는 입금 하신후, <br> <strong>"070-4633-3498"</strong>으로 꼭!! 확인 전화 주시기 바랍니다.</p>
+                            </div>
+                            <div class="main-line3"></div>
                         </div>
                     </div>
                 </div>
@@ -294,7 +326,7 @@ $('.go-top').click(function(){//위로가기 버튼을 클릭했을때
     <!-- 상품 확대 사진 -->
     <script>
         function openDetail(){
-    var popup = window.open('./detail/product1-1-1.html', '제품 상세 이미지', 'width=500px, height=500px,scrollbars=yes');
+    var popup = window.open('./detail/product1-1-2.html', '제품 상세 이미지', 'width=650px, height=500px, scrollbars=no');
 }
     </script>
 
