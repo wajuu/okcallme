@@ -423,13 +423,13 @@ body {
     position: relative;
     left: 10px;
     width: 180px;
+    padding-top: 75px;
 }
 
 /*콜신져 POS*/
 .side-main{
     display: flex;
     text-align: center;
-    margin-top: 75px;
 }
 .main-wrapper{
     width: 100vw;
@@ -512,7 +512,7 @@ body {
 }
 
 .content1-1 .content-table{
-    padding-top: 15px;
+    margin-top: 90px;
 }
 
 .content-table{
@@ -693,7 +693,6 @@ body {
 
 .merit{
     width: 80vw;
-    padding: 50px 0;
     display: inline-flex;
     flex-direction: column;
 }
@@ -716,9 +715,6 @@ body {
     font-size: 1.1em;
     line-height: 1.5em;
     padding-top: 20px;
-}
-.equipment{
-    padding-top: 50px;
 }
 
 .equipment>.l-text{
