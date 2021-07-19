@@ -21,7 +21,7 @@ a{
 }
 
 
-body .phoneNo, #wrap #header .phoneNo, #container .phoneNo, #header .admin, #container .side-wrapper, #container .pro-down, #header .menu-list-box {
+body .phoneNo, #wrap #header .phoneNo, #container .phoneNo, #header .admin, #container .side-wrapper, #container .pro-down, #header .menu-list-box, #container .hover-icon {
     display: none;
 }
 a:hover{
@@ -105,7 +105,7 @@ body {
     position: fixed;
     top: 0;
     height: 75px;
-    z-index: 2;
+    z-index: 4;
     background: #fff;
 }
 .header{
@@ -1070,134 +1070,37 @@ width: 66.66666667%;
     padding: 0.6em 1.2em;
 }
 
-/*회사소개*/
-.wrap{
-    text-align: center; min-height:100%;
-    position:relative;
-    padding-bottom:100px;
-    display: inline-block;
-}
-.intro{
-    margin-top: 70px;
-    margin-bottom: 50px;
-}
-.intro-table{
-    width: 65vw;
-}
-.intro-div{
-    width: 55vw;
-    text-align: center;
-}
-
-.intro .title-2 {
-    text-align: left; padding-bottom: 20px;
-}
-.intro-set {
-    text-align: left;
-    width: 60vw;
-}
-.intro-set .point-text {
-    text-align: left; 
-    vertical-align: top;
-    width: 20%;
-}
-.intro-set .s-text{
-    font-weight: 300;
-}
-.intro-set td {
-    padding: 20px 20px;
-}
-.ceo-img {
-    width: 60vw; height: 37vw;
-}
-.sign {
-    width: 8vw;
-    position: relative;
-    left: 90%;
-}
-.history {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    text-align: left;
-    line-height: 1.5em;
-}
-.history-group{
-    display: inline-block;
-    width: 55vw;
-    border-top: 1px black solid;
-}
-.history-group .history-info{
-    padding-top: 30px;
-    padding-bottom: 30px;
-}
-.history-group .history-info{
-    border-bottom: 1px solid #c6c6c6;
-}
-.history-group .history-info:last-child{
-    border: none;
-}
-.history-group .history-info .txt_year{
-    width: 15vw;
-    float: left;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 15px;
-}
-.history-group .history-info .inner_info{
-    width: 50vw;
-    display: inline-block;
-    margin-left: 30px;
-    text-align: left;
-}
-.history-group .history-info .txt_info{
-    width: 100%;
-    display: inline-block;
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.history-info .inner_info .txt_num{
-    display: inline-block;
-    margin-right: 20px;
-}
-.history-info .inner_info .txt_date{
-    text-align: left;
-    word-break: keep-all;
-    font-weight: 300;
-    display: inline-block;
-    vertical-align: top;
-}
-
-
 /*쇼핑몰*/
 
 .shop-box{
     width: 100vw;
+    height: 100%;
 }
-.shop-top-banner {position: relative; width: 100vw; height: 350px; margin:0 auto; padding:0; overflow: hidden;}
+.shop-top-banner {position: relative; width: 100vw; height: 200px; margin:0 auto; padding:0; overflow: hidden;}
 .shop-top-banner ul {position: absolute; margin: 0px; padding:0; list-style: none; }
-.shop-top-banner ul li {float: left; width: 100vw; height: 350px; margin:0; padding:0;}
+.shop-top-banner ul li {float: left; width: 100vw; height: 200px; margin:0; padding:0;}
 
 .shop-box .shop-banner{
     width: 100vw;
-    height: 350px;
-    background-image: url(../img/shopping/shop-banner.jpeg);
+    height: 200px;
+    background-image: url(../img/shopping/shop-banner_phone.jpeg);
     background-size: cover;
 }
 .shop-box .shop-banner .text{
-    width: 25%;
-    height: 350px;
+    width: 100%;
+    height: 200px;
     display: inline-flex;
     justify-content: center;
     flex-direction: column;
     text-align: left;
-    padding-left: 23%;
+    padding-left: 15%;
 }
 .shop-box .shop-banner .text h2{
-    padding: 20px 0;
+    padding: 10px 0;
     text-align: left;
     font-family: 'Gugi', cursive;
     font-weight: 300;
-    font-size: 3em;
+    font-size: 2.5em;
     text-shadow: 0 0 5px #777;
     color: #19b0bb;
     -webkit-text-stroke: 0.5px #fff;
@@ -1223,10 +1126,14 @@ width: 66.66666667%;
 }
 .shop-submenu{
     width: 100vw;
-    height: 70px;
     display: inline-flex;
     justify-content: center;
     align-items: center;
+}
+.shop-submenu .s-text{
+    display: inline-flex;
+    flex-wrap: wrap;
+    font-size: 1em;
 }
 .shop-submenu ul li::before{
     content: "ㅣ";
@@ -1237,6 +1144,9 @@ width: 66.66666667%;
 }
 .shop-submenu ul li:first-child::before{
     content: none;
+}
+.shop-submenu ul li{
+    padding: 5px 0;
 }
 .shop-submenu ul li a{
     color: #19b0bb;
@@ -1258,11 +1168,12 @@ width: 66.66666667%;
     padding: 0 10px;
 }
 .shop-icon img{
-    width: 30px;
+    width: 25px;
 }
+
 .shop-title-box{
     display: inline-flex;
-    width: 100vw;
+    width: 95vw;
     height: 60px;
     justify-content:center;
     align-items: center;
@@ -1270,26 +1181,27 @@ width: 66.66666667%;
 }
 .shop-title-box div:nth-child(2){
     display: inline-flex;
-    justify-content: flex-start;
+    justify-content: flex-end;
     align-items: center;
-    width: 50%;
-    padding-left: 20px;
+    width: 42%;
+    padding-left: 5px;
 
 }
 .shop-title-box .shop-s-title{
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 30%;
+    width: 55%;
     height: 60px;
     text-align: center;
+    padding-left: 5px;
 }
 .shop-s-title{
     display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 150px;
+    height: 100px;
     text-align: center;
 }
 
@@ -1308,7 +1220,7 @@ width: 66.66666667%;
     align-items: center;
     width: 100vw;
     height: 100%;
-    padding-bottom: 100px;
+    padding-bottom: 30px;
     margin-top: 20px;
 }
 .shop-list2{
@@ -1318,9 +1230,10 @@ width: 66.66666667%;
 .shop-list3{
     padding-bottom: 10px;
     display: inline-block;
+    width: 100vw;
 }
 .shop-list img{
-    width: 270px;
+    width: 200px;
     height: auto;
     margin: 0 20px;
     box-shadow: 2px 2px 7px #777;
@@ -1329,41 +1242,13 @@ width: 66.66666667%;
     color: #19b0bb;
     font-weight: 700;
 }
-.shop-list .hover-icon{
-    background: #cde3f7;
-    width: 270px;
-    height: 193px;
-    position: absolute;
-    margin:  0 20px;
-    text-align: center;
-    opacity: 0;
-}
-.shop-list .hover-icon i{
-    padding: 32% 0;
-    z-index: 2;
-    font-size: 5em;
-    color: #448aca;
-    transform: scale(1);
-    transition: all .3s linear;
-}
-.shop-list a:hover .hover-icon{
-    opacity: 1;
-}
-.shop-list a:hover .hover-icon i{
-    font-size: 3em;
-    transform: scale(1);
-}
 
-.shop-list .a-box{
-    display: inline-flex;
-}
-.shop-list a:hover img{
-    opacity: 0.3;
-}
+
 .shop-list .section-4{
     display: inline-flex;
+    flex-direction: column;
     width: 100vw;
-    height: 200px;
+    height: 400px;
     justify-content: center;
     align-items: center;
 }
@@ -1394,13 +1279,21 @@ width: 66.66666667%;
     font-size: 1.5em;
 }
 .a-box-flex{
+    width: 100vw;
     display: inline-flex;
-    flex-direction: column;
+    align-items: center;
     justify-content: center;
+    padding-bottom: 10px;
 }
-.a-box-flex img{
-    margin: 0 45px;
+.a-box-mobile{
+    flex-direction: column;
 }
+.a-box-flex a{
+    display: inline-flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
 .a-box-flex .hover-icon{
     margin: 0 45px;
 }
@@ -1413,6 +1306,7 @@ width: 66.66666667%;
 }
 .a-box-flex>div>h2{
     padding-right: 20px;
+    font-size: 1.5em;
 }
 
 .shop-s-title-left{
@@ -1421,6 +1315,7 @@ width: 66.66666667%;
 }
 .section-list{
     display: inline-flex;
+    flex-direction: column;
     width: 100vw;
     height: 100%;
     justify-content: center;
@@ -1437,20 +1332,15 @@ width: 66.66666667%;
 .a-box-list .hover-icon, .a-box-list img{
     margin: 0;
     box-shadow: none;
-    width: 320px;
-    height: 260px;
+    width: 100px;
+    height: auto;
 }
 .a-box-list .pic-area{
     margin: 0 10px;
-    width: 320px;
-    height: 260px;
+    width: 100px;
+    height: 65px;
     box-shadow: 2px 2px 7px #777;
     text-align: center;
-    background-color: rgb(184, 182, 182);
-}
-.a-box-list .hover-icon2{
-    width: 320px;
-
 }
 .a-box-list .title-area{
     display: inline-flex;
@@ -1458,31 +1348,30 @@ width: 66.66666667%;
     justify-content: center;
     align-items: flex-start;
     text-align: center;
-    width: 280px;
-    height: 200px;
-    margin: 0 10px;
+    width: 180px;
+    height: 85px;
     box-shadow: 2px 2px 7px #777;
     padding: 0 20px;
 }
 .a-box-list .title-area .basket-icon {
-    width: 280px;
-    height: 200px;
+    width: 190px;
+    height: 85px;
     display: inline-flex;
-    align-items: flex-end;
+    align-items: center;
     justify-content: flex-end;
     position: absolute;
 }
 .a-box-list .title-area .count-icon{
     display: inline-flex;
     align-items: flex-end;
+    justify-content: flex-end;
     position: absolute;
-    width: 450px;
-    height: 175px;
-    z-index: 3;
+    width: 300px;
+    height: 200px;
+    z-index: 2;
 }
 .a-box-list .title-area .buy-icon{
-    width: 220px;
-    z-index: 3;
+    display: none;
 }
 
 .count-icon div{
@@ -1519,6 +1408,8 @@ width: 66.66666667%;
     display: inline-flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    padding-bottom: 0;
 }
 .a-box-list .title-area .basket-icon div{
     background-color: #19b0bb;
@@ -1526,8 +1417,8 @@ width: 66.66666667%;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 45px;
-    height: 45px;
+    width: 40px;
+    height: 40px;
     border-radius: 50px;
 }
 .a-box-list .title-area .counsil-icon div{
@@ -1535,22 +1426,22 @@ width: 66.66666667%;
     margin-bottom: 15px;
 }
 .a-box-list .title-area .basket-icon i{
-    font-size: 1.5em;
+    font-size: 1.2em;
     color: #fff;
 }
 .a-box-list .title-area .basket-icon span{
-    font-size: 0.8em;
-    padding-bottom: 10px;
+    display: none;
 }
 .a-box-list .title-area .m-text{
     font-weight: 900;
+    font-size: 1em;
 }
+
 .a-box-list .xs-text{
-    color: #000;
-    font-weight: 300;
+    display: none;
 }
 .a-box-list .price{
-    padding-top: 50px;
+    padding-top: 5px;
 }
 .shop-detail{
     display: inline-flex;
@@ -1558,16 +1449,17 @@ width: 66.66666667%;
 }
 
 .shop-detail .title-area{
-    height: 260px;
-    width: 500px;
+    height: 200px;
+    width: 300px;
 }
 .shop-detail .title-area .basket-icon, .count-icon{
-    width: 500px;
-    height: 260px;
+    width: 300px;
+    height: 180px;
+    padding-bottom: 20px;
 }
 .shop-detail .title-area .buy-icon{
     height: 130px;
-    width: 500px;
+    width: 200px;
 }
 .shop-detail .detail-pic{
     padding-top: 50px;
@@ -1576,7 +1468,7 @@ width: 66.66666667%;
     padding-left: 20px;
 }
 .shop-detail .detail-pic img{
-    width: 700px;
+    width: 100vw;
     padding: 20px 90px;
     margin-top: 50px;
 }
@@ -1614,6 +1506,9 @@ width: 66.66666667%;
 .shop-detail .detail-info .pay-info{
     padding-top: 20px;
     padding-left: 15px;
+}
+.shop-detail .m-text{
+    font-size: 1.5em;
 }
 /*fixed banner*/
 
