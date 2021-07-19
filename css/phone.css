@@ -429,6 +429,7 @@ body {
 .side-main{
     display: flex;
     text-align: center;
+    margin-top: 75px;
 }
 .main-wrapper{
     width: 100vw;
