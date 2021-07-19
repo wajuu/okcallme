@@ -20,7 +20,7 @@
     <meta property="og:description" content="(주)꿈과행복 콜신져 방문을 환영합니다.">
     <meta property="og:image" content="http://nargo.okcallme.com/okcallme/img/logo2.png">
 
-    <link rel="stylesheet" type="text/css" media="screen and (max-width:766px)" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" media="screen and (max-width:766px)" href="./css/phone.css">
     <link rel="stylesheet" type="text/css" media="screen and (min-width:767px)" href="./css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
     <script src="./js/motion.js"></script>
@@ -38,7 +38,7 @@
     <div id="wrap">
         <div id="header">
             <!-- 관리자페이지 -->
-            <div class="admin">
+            <div class="admin phoneNo">
                 <ul class="admin-list xs-text">
                     <li><a href="">광고주영역</a></li>
                     <li><a href="">프랜차이즈</a></li>
@@ -47,7 +47,7 @@
             </div>
 
             <!-- 로고박스 -->
-            <div class="menu-list-box">
+            <div class="menu-list-box phoneNo">
                 <div class="logo-box">
                     <a href="./index.html"><img src="./img/logo.png" alt="logo"></a>
                 </div>
@@ -87,7 +87,51 @@
                     </ul>
                 </div>
             </div>
+
+            <!-- 모바일 -->
+            <div class="phone-main deskNo">
+                <div class="header">
+                    <div class="logo-box" id="logo-box">
+                        <a href="./index.html"><img src="./img/logo.png" alt="logo"></a>
+                    </div>
+                    <div class="menu_btn"><a href="#">
+                            <img src="./img/mobile/menu.png" alt="menu">
+                        </a>
+                    </div>
+                </div>
+    
+                <div class="menu_bg"></div>
+                <div class="sidebar_menu">
+                    <div class="close_btn"><a href="#">
+                            <img src="./img/mobile/close.png" alt="menu">
+                        </a>
+                    </div>
+                    <ul class="menu_wrap">
+                        <li><a class="m-text" href="./1-1.html">콜신져 POS</a></li>
+                        <div class="main-line3"></div>
+                        <li><a class="m-text" href="./1-2.html">다른 프로그램</a></li>   
+                        <div class="main-line3"></div>
+                        
+                        <li><a class="m-text" href="./2-2.html">사용 방법</a>
+                            <ul>
+                                <li><a class="s-text" href="./2-2.html">요금 및 할인</a></li>
+                                <li><a class="s-text" href="./2-3.html">주변 장치 소개</a></li>
+                            </ul>
+                        </li>
+
+                        <div class="main-line3"></div>
+
+                        <li><a class="m-text" href="./4-1.html">배달/주문 연동</a></li>
+                        <div class="main-line3"></div>
+                        <li><a class="m-text" href="./support.html">고객센터</a></li>
+                        <div class="main-line3"></div>
+                        <li><a class="m-text" href="./shop.html">쇼핑몰</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
+
+            
 
         <div id="container">
             <!-- 메인 기본 화면 -->
@@ -101,12 +145,12 @@
                                 <!-- <div class="event-img">
                                     <img src="./img/events.png" alt="events">
                                 </div> -->
-                                <a href="./2-1.html">
+                                <a href="./2-1.html" class="phoneNo">
                                     <div class="m-text event" id="event">1년에 2-3명만 추천하면<br>평생 무료 사용도 가능!!</div>
                                 </a>
                             </div>
                         </td>
-                        <td>
+                        <td class="phoneNo">
                             <table class="select-menu l-text">
                                 <tr>
                                     <td><a href="./1-1.html#1-1">매출<br>관리</a></td>
@@ -121,11 +165,31 @@
                             </table>
                         </td>
                     </tr>
+                    <tr class="deskNo">
+                        <td>
+                            <!-- 모바일 선택메뉴 -->
+
+                            <table class="table1 mobile-select">
+                                <tr>
+                                    <td><a href="./1-1.html">매출<br>관리</a></td>
+                                    <td><a href="./1-1.html#1-2">고객<br>관리</a></td>
+                                    <td><a href="./1-1.html#1-3">주문<br>관리</a></td>
+                                </tr>
+                                <tr>
+                                    <td><a href="./1-1.html#1-4">매장<br>관리</a></td>
+                                    <td><a href="./1-1.html#1-5">배달대행<br>연동</a></td>
+                                    <td><a href="./1-1.html#1-6">또 다른<br>기능</a></td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
                 </table>
+                
                 <div class="arrow">
                     <i class="fas fa-angle-double-down"></i>
                 </div>
             </div>
+            
 
             <!-- 메인 콜신져란 -->
             <div class="main-2">
@@ -153,7 +217,7 @@
                     </div>
 
                     <div class="recom-pic2 mobile-no sc-img">
-                        <table>
+                        <table class="phoneNo">
                             <tr class="block block1">
                                 <td class="img">
                                     <img class="recom-img" src="./img/definition1.png" alt="details">
@@ -167,6 +231,30 @@
                                 <td class="img">
                                     <img class="recom-img" src="./img/definition2.png" alt="details">
                                 </td>
+                                <td class="text">
+                                    <h3 class="point-text">배달대행요청 자동연동</h3>
+                                    <p class="s-text">저장 1번으로 다수 배달대행업체에<br>자동으로 전송됩니다.</p>
+                                </td>
+                            </tr>
+                        </table>
+                        <table class="deskNo">
+                            <tr class="block block1">
+                                <td class="img">
+                                    <img class="recom-img" src="./img/definition1.png" alt="details">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="text">
+                                    <h3 class="point-text">배달어플주문 자동접수</h3>
+                                    <p class="s-text">배민,요기요,위메프오 배달앱 주문이<br>콜신져에 자동접수됩니다.</p>
+                                </td>
+                            </tr>
+                            <tr class="block block2">
+                                <td class="img">
+                                    <img class="recom-img" src="./img/definition2.png" alt="details">
+                                </td>
+                            </tr>
+                            <tr>
                                 <td class="text">
                                     <h3 class="point-text">배달대행요청 자동연동</h3>
                                     <p class="s-text">저장 1번으로 다수 배달대행업체에<br>자동으로 전송됩니다.</p>
@@ -237,7 +325,7 @@
 
             <!-- 메인 제휴업체 -->
             <div class="main-4 sc-img" id="main-4">
-                <table class="connect-shop">
+                <table class="connect-shop phoneNo">
                     <tr>
                         <td>
                             <h3 class="m-text">콜신져와 함께하는 배달대행업체</h3>
@@ -255,10 +343,33 @@
                         </td>
                     </tr>
                 </table>
+                <table class="connect-shop deskNo">
+                    <tr>
+                        <td>
+                            <div class="main-line3" style="margin-bottom: 40px;"></div>
+                            <h3 class="point-text">콜신져와 함께하는 <br> 배달대행업체</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img class="bar" src="./img/title-baedallist_2.jpg" alt="배달대행업체">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <h3 class="point-text">콜신져와 함께하는 <br> 프랜차이즈 제휴업체</h3>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="./img/franchise.png" alt="프랜차이즈">
+                        </td>
+                    </tr>
+                </table>
             </div>
 
             <!-- 메인-쇼핑몰 -->
-            <div class="shop-wrapper" style="padding-top: 60px;">
+            <div class="shop-wrapper phoneNo" style="padding-top: 60px;">
                 <div class="main-line2" style="padding-bottom: 50px;"></div>
                 <div class="shop-s-title" style="margin-bottom: 40px;">
                     <p class="point-text" >콜신져 쇼핑몰</p>
@@ -317,7 +428,7 @@
                                     <h6 class="xs-text">더 보러가기 &nbsp;<i class="fas fa-chevron-circle-right"></i></h6>
                                 </a>
                             </div>
-                            <a href="./shop-print.html">
+                            <a href="./shop/product2-1.html">
                                 <div class="hover-icon"><i class="fas fa-search"></i></div>
                                 <img src="./img/shopping/main-shop07.png" alt="shop"></a>
                         </div>
@@ -328,7 +439,7 @@
                                     <h6 class="xs-text">더 보러가기 &nbsp;<i class="fas fa-chevron-circle-right"></i></h6>
                                 </a>
                             </div>
-                            <a href="./shop-card.html">
+                            <a href="./shop/product4-1.html">
                                 <div class="hover-icon"><i class="fas fa-search"></i></div>
                                 <img src="./img/shopping/main-shop08.png" alt="shop"></a>
                         </div>
@@ -350,22 +461,22 @@
                         <div class="a-box a-box-title">
                             <h2 class="m-text">기타 장치</h2>
                             <h6 class="s-text">-</h6>
-                            <a href="./shop-etc.html">
+                            <a href="./shop-etc-1.html">
                                 <h6 class="xs-text">더 보러가기 &nbsp;<i class="fas fa-chevron-circle-right"></i></h6>
                             </a>
                         </div>                             
                         <div class="a-box">
-                            <a href="./shop-etc.html">
+                            <a href="./shop/product5-2.html">
                                 <div class="hover-icon"><i class="fas fa-search"></i></div>
                                 <img src="./img/shopping/main-shop10.png" alt="shop"></a>
                         </div>
                         <div class="a-box">
-                            <a href="">
+                            <a href="./shop/product5-11.html">
                                 <div class="hover-icon"><i class="fas fa-search"></i></div>
                                 <img src="./img/shopping/main-shop11.png" alt="shop"></a>
                         </div>
                         <div class="a-box">
-                            <a href="">
+                            <a href="./shop/product5-5.html">
                                 <div class="hover-icon"><i class="fas fa-search"></i></div>
                                 <img src="./img/shopping/main-shop12.png" alt="shop"></a>
                         </div>
