@@ -867,6 +867,9 @@ body {
 .merit .merit-text{
     text-align: start;
 }
+.merit .public-text{
+    width: 35%;
+}
 .merit .main-line{
     width: 100%;
 }
