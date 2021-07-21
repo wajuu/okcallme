@@ -229,19 +229,6 @@ body {
 .main-menu:hover .dropdown{
     display: block;
 }
-/* .login{
-    display: inline-block;
-    width: 10vw;
-    min-width: 100px;
-    padding: 10px 15px;
-    text-align: center;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 3px #777;
-    position: relative;
-    left: 100px;
-    top: -20px;
-} */
 #login a{
     box-shadow: 0 0 3px #777;
     padding: 10px 5px;
@@ -265,6 +252,26 @@ body {
     color: white;
 }
 
+
+.subMenu{
+    width: 100vw;
+    height: 40px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    font-size: 0.8em;
+}
+.subMenu li{
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 5px #777;
+}
+.subMenu li a{
+    width: 120px;
+    padding: 10px;
+}
 /*메인1-배경*/
 #home-1{
     height: calc(100vh - 90px);
