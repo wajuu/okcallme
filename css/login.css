@@ -1,0 +1,316 @@
+@font-face {
+  font-family: 'NEXON Lv1 Gothic OTF';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv1 Gothic OTF.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@media (max-width: 920px){
+  body{
+      font-size: 60%;
+  }
+  .logo{
+      width: 100%;
+  }
+  #free{
+      width: 150px;
+  }
+  #event{
+      width: 250px;
+  }
+  .recom-img{
+      width: 300px;
+  }
+  .logo-box img{
+      size: 60%;
+  }
+  .nav .nav-list a{
+      padding: 2px 10px;
+  }
+
+
+}
+
+@media (min-width: 921px) and (max-width: 1199px) {
+/* 테블릿 가로*/
+body{
+    font-size: 80%;
+}
+.logo{
+    width: 100%;
+}
+#free{
+    width: 150px;
+}
+#event{
+    width: 250px;
+}
+.recom-img{
+    width: 300px;
+}
+.logo-box img{
+    size: 60%;
+}
+.nav .nav-list a{
+    padding: 2px 10px;
+}
+
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "NEXON Lv1 Gothic OTF", normal;
+  border-radius: 5px;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  list-style: none;
+}
+   
+a{
+  text-decoration: none;
+  color:black;
+}
+
+ul li{display: inline-block;}
+
+.l-text{
+  font-size: 4em;
+  color: #448aca;
+  font-weight: 900;
+}
+.m-text{
+  font-size: 1.5em;
+}
+.s-text{
+  font-size: 0.9em;
+} 
+
+/*header*/
+#header{
+  position: fixed;
+  width: 100vw;
+  height: 90px;
+  background-color: #fff;
+  border-bottom: 1px solid #dedede;
+  box-shadow: 0 0 5px 0 #dedede;
+  z-index: 4;
+}
+.admin{
+  display: inline-block;
+  font-size: 0.8em;
+  width: 98vw;
+  height: 20px;
+}
+.admin .admin-list{
+  width: 98vw;
+  height: 20px;
+  float:right;
+  text-align: right;
+  padding: 5px 10px;
+}
+.admin .admin-list li{
+  text-align: center;
+  float: right;
+  width: 80px;
+}
+.menu-list-box{
+  display: inline-flex;
+  width: 100vw;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.logo-box{
+  display: inline-block;
+  height: 50px;
+  width: 15%;
+}
+.logo-box img{
+  height: 100%;
+}
+.nav{
+  height: 60px;
+  float: left;
+  padding: 5px 10px;
+  margin-right: 2vw;
+  width: 60%;
+}
+.nav-login{
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  padding: 0;
+  margin-right: 0;
+}
+.nav .nav-list{
+  width: 100%;
+  height: 60px;
+}
+.nav .nav-list>li{
+  height: 60px;
+  display: inline-flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+.nav .nav-list>li::before{
+  content: "ㅣ";
+  color: #dedede;
+}
+.nav .nav-list>li:first-child::before{
+  content: none;
+}
+
+.nav .nav-list a{
+  display: inline-block;
+  padding: 2px 15px;
+  
+}
+.dropdown{
+  background-color: #fff;
+  color: #000000;
+  z-index: 1;
+  text-align:start;
+  position: absolute;
+  top: 80px;
+  float: left;
+  margin-left: 15px;
+  display: none;
+}
+.first-drop{
+  margin-left: 0;
+}
+.dropdown li{
+  height: 30px;
+  display: block;
+  text-align: center;
+}
+.dropdown li a{
+  font-size: 0.9em;
+  margin: 0 auto;
+}
+
+.nav li:hover>a {
+  font-weight: 700;
+}
+.main-menu:hover .dropdown{
+  display: block;
+}
+
+#login a{
+  box-shadow: 0 0 3px #777;
+  padding: 10px 5px;
+  color: white;
+  background-color: #448aca;
+  border-radius: 5px;
+}
+
+.selected{
+  font-weight: 900;
+  color: #448aca;
+}
+.shop-submenu .selected2, .shop-submenu ul li:nth-child(n+7) .selected2{
+  background: linear-gradient(to top, #ebff37 50%, transparent 40%);
+  color: #000;
+}
+
+
+
+#container .selected:hover{
+  color: white;
+}
+
+
+.loginBox{
+  width: 100vw;
+  height: 100vh;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+.loginPage{
+  width: 700px;
+  height: 400px;
+  padding: 0 50px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 15px;
+  box-shadow: 2px 2px 10px #8cbdeb;
+}
+.needLogin{
+  width: 50%;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.needLogin .s-text{
+  padding-top: 40px;
+}
+.needLogin .logo{
+  width: 200px;
+  text-align: center;
+  padding-bottom: 20px;
+}
+.needLogin img{
+  width: 140px;
+}
+
+.login-form {
+  width: 300px;
+  background-color: #EEEFF1;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 20px;
+  text-align: center;
+  border: none;
+    
+}
+.id{
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  justify-content: flex-end;
+  color: #424242;
+  font-size: 0.9em;
+}
+.text-field {
+  font-size: 0.9em;
+  padding: 10px;
+  border: none;
+  width: 260px;
+  margin-bottom: 10px;
+  
+}
+  
+.submit-btn {
+  font-size: 0.9em;
+  border: none;
+  padding: 10px;
+  width: 260px;
+  background-color: #448aca;
+  margin-bottom: 10px;
+  color: white;
+}
+.join {
+  display: inline-block;
+  text-decoration: none;
+  font-size: 0.9em;
+  border: none;
+  padding: 10px;
+  width: 260px;
+  background-color: #448aca;
+  margin-bottom: 30px;
+  color: white;
+}
+  
+.links {
+    text-align: center;
+}
+  
+.links a {
+  font-size: 0.8em;
+  color: #9B9B9B;
+}
