@@ -501,18 +501,11 @@ body {
 .main-wrapper .explain img{
     width: 100%;
 }
-#content1-1{
-    height: 1000px;
-}
 .content1{
     display: inline-flex;
     align-items: center;
     height: 100vh;
     text-align: center;
-}
-
-.content1-1 .content-table{
-    margin-top: 30px;
 }
 
 .content-table{
