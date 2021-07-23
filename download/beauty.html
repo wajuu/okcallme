@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>콜신져 마스터 설치</title>
+
+</head>
+
+<body>
+    <div class="download-popup">
+        <div class="download-box">
+            <p class="down-title l-text">"콜신져 뷰티플러스"</p>
+            <a class="download m-text" href="#" download>
+                1. 프로그램 설치</a>
+            <a class="download m-text" href="#" download>
+                2. 업데이트</a>
+        </div>
+        <div class="download-box download-text">
+            <p class="s-text exp1">★ 2개의 파일을 모두 다운로드 후 순서대로 설치 해주세요 ★</p>
+        </div>
+        <div class="download-howto">
+            <a href="#" type="button" onclick="myFunction()">
+                <p class="how-to">프로그램 설치 방법 보기</p>
+                <p id="click">클릭해서 설치 방법을 확인하세요</p>
+            </a>
+            <img id="download-img" src="./img/다운로드설치안내.png" alt="다운로드 설명 사진">
+        </div>
+    </div>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("download-img");
+            var y = document.getElementById("click");
+            if (x.style.display == "none") {
+
+                x.style.display = "block";
+                y.style.display = "none";
+            } 
+            else {
+            x.style.display = "none";
+            y.style.display = "block";
+            }
+        }
+        </script>
+
+</body>
