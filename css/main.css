@@ -1405,6 +1405,12 @@ width: 66.66666667%;
     flex-direction: column;
     margin-bottom: 100px;
 }
+.shop-wrapper .shopExplain{
+    width: 74vw;
+    margin: 0 auto;
+    line-height: 1.5em;
+    font-size: 0.9em;
+}
 .shop-wrapper .shop-line{
     width: 100vw;
     border-bottom :2px solid #19b0bb;
@@ -2143,19 +2149,36 @@ footer .remoteFooter{
     width: 485px;
     margin: 5px;
     padding-bottom: 30px;
-    border: 2px solid #448aca;
 }
-.download-box{
+.download-box, .download-howto{
     width: 485px;
     display: inline-flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    padding-top: 20px;
+    padding-top: 70px;
 }
-.download-box img{
-    width: 480px;
+.download-howto .how-to{
+    text-align: center;
+    font-weight: 700;
+    width: 250px; 
+    padding:10px; 
+    background-color: #ababab; 
+    font-size: 2em; 
+    border-radius: 50px;
+    color: #fff;
+}
+.download-howto #click{
+    font-size: 1.5em;
+    font-weight: 700;
+    text-align: center;
+    padding: 5px;
+}
+.download-howto img{
+    display: none;
+    width: 500px;
     height: auto;
+    padding-top: 20px;
 }
 .down-title{
     font-size: 2.5em;
