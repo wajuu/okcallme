@@ -85,7 +85,7 @@
                 <div class="nav nav-login">
                     <ul>
                         <li id="login">
-                            <a class="s-text" href="./login.html">로그인/회원가입</a>
+                            <a class="s-text" href="#">로그인/회원가입</a>
                         </li>
                     </ul>
                 </div>
@@ -278,7 +278,7 @@
                             </td>
                         </tr>
                         <tr>
-                            <td class="scroll" id="scroll3" onclick="myFunction()">
+                            <td class="scroll" id="scroll3">
                                 <a style="cursor:pointer">
                                     <img src="./img/human.png" style="width: 45px;" alt="support">
                                     <p class="point-text">?</p>
@@ -379,14 +379,16 @@
         </script>
         <!-- 고객지원아이콘 -->
         <script>
-            function myFunction() {
-                var x = document.getElementById("hidden-scroll");
-                if (x.style.display === "none") {
-                    x.style.display = "block";
-                } else {
-                    x.style.display = "none";
-                }
-            }
+            $(document).ready(function()
+                { $('#scroll3').click(function(){
+                    if($('#hidden-scroll').css('display') =='none'){
+                        $('#hidden-scroll').css("display","block");
+                    }
+                    else{
+                        $('#hidden-scroll').css("display","none");
+                    }
+                });
+            });
         </script>
         <!-- rolling banner -->
         <script>
