@@ -22,27 +22,36 @@
             <p class="s-text exp1">★ 2개의 파일을 모두 다운로드 후 순서대로 설치 해주세요 ★</p>
         </div>
         <div class="download-howto">
-            <a href="#" type="button" onclick="myFunction()">
+            <a href="#" type="button">
                 <p class="how-to">프로그램 설치 방법 보기</p>
                 <p id="click">클릭해서 설치 방법을 확인하세요</p>
             </a>
             <img id="download-img" src="./img/다운로드설치안내.png" alt="다운로드 설명 사진">
         </div>
     </div>
-    <script>
-        function myFunction() {
-            var x = document.getElementById("download-img");
-            var y = document.getElementById("click");
-            if (x.style.display == "none") {
 
-                x.style.display = "block";
-                y.style.display = "none";
-            } 
-            else {
-            x.style.display = "none";
-            y.style.display = "block";
-            }
-        }
-        </script>
+
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script>
+        $(document).ready(function()
+        {
+            $('#button').click(function()
+            {
+                if($('#download-img').css('display') =='none')
+                {
+                    $('#download-img').css("display","block");
+                    $('#click').css("display","none");
+                    window.resizeTo(500, 800);
+
+                }
+                else
+                {
+                    $('#download-img').css("display","none");
+                    $('#click').css("display","block");
+                    window.resizeTo(500, 500);
+                }
+            });
+        });
+    </script>
 
 </body>
