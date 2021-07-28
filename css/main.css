@@ -203,7 +203,7 @@ body {
     
 }
 .nav-login #myInfo, .nav-login #logout{
-    padding: 5px;
+    padding: 5px 5px;
     box-shadow: 0 0 3px #777;
     background: #f5f4f4;
 
@@ -1526,7 +1526,6 @@ width: 66.66666667%;
     align-items: center;
     width: 100vw;
     height: 100%;
-    padding-bottom: 100px;
     margin-top: 20px;
 }
 .shop-list2{
