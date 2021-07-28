@@ -81,8 +81,17 @@
                 </div>
                 <div class="nav nav-login">
                     <ul>
-                        <li id="login">
+                        <!-- 로그인하지 않았을때 -->
+                        <!-- <li id="login">
                             <a class="s-text" href="#">로그인/회원가입</a>
+                        </li> -->
+
+                        <!-- 로그인했을때 -->
+                        <li id="myInfo">
+                            <a class="s-text" href="./info/info1.html">나의정보보기</a>
+                        </li>
+                        <li id="logout">
+                            <a class="s-text" href="#">로그아웃</a>
                         </li>
                     </ul>
                 </div>
@@ -384,11 +393,21 @@
                                 <img src="./img/shopping/main-shop03.png" alt="shop"></a>
                         </div>
                     </div>
+                    <div class="pointBox">
+                        <a href="#">
+                            <img src="./img/shopping/마일리지10000_2.png" alt="shop"></a>
+                        <a href="#">
+                            <img src="./img/shopping/마일리지30000_2.png" alt="shop"></a>
+                        <a href="#">
+                            <img src="./img/shopping/마일리지50000_2.png" alt="shop"></a>
+                        <a href="#">
+                            <img src="./img/shopping/마일리지10만_2.png" alt="shop"></a>
+                    </div>
                 </div>
                 <div class="shop-list shop-list2">
                     <div class="section-4">
                         <div class="a-box a-box-title">
-                            <h2 class="m-text">CID 발신번호장치</h2>
+                            <h2 class="m-text">CID <br> 발신번호장치</h2>
                             <h6 class="s-text">-</h6>
                             <a href="./shop-cid.html">
                                 <h6 class="xs-text">더 보러가기 &nbsp;<i class="fas fa-chevron-circle-right"></i></h6>
@@ -667,19 +686,7 @@
       }, 800);
     });
         </script>
-        <!-- 고객지원아이콘 -->
-        <script>
-            $(document).ready(function()
-                { $('#scroll3').click(function(){
-                    if($('#hidden-scroll').css('display') =='none'){
-                        $('#hidden-scroll').css("display","block");
-                    }
-                    else{
-                        $('#hidden-scroll').css("display","none");
-                    }
-                });
-            });
-        </script>
+
         <!-- rolling banner -->
         <script>
             //current position

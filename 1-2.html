@@ -144,7 +144,7 @@
                 
                 <!-- 본문 -->
                 <div class="main-wrapper">
-                    <div class="content1 content1-1 content-program">
+                    <div class="content-program">
                         
                         <!-- 모바일 프로그램 소개 메뉴 -->
                         <div class="phoneProMenu deskNo">
@@ -393,23 +393,6 @@
       }, 800);
     });
         </script>
-        <!-- 고객지원아이콘 -->
-        <script>
-            $(document).ready(function()
-        {
-            $('#scroll3').click(function()
-            {
-                if($('#hidden-scroll').css('display') =='none')
-                {
-                    $('#hidden-scroll').css("display","block");
-                }
-                else
-                {
-                    $('#hidden-scroll').css("display","none");
-                }
-            });
-        });
-            </script>
         <!-- rolling banner -->
         <script>
             //current position
@@ -529,7 +512,7 @@
         <!-- 다운로드 -->
         <script>
             function openDownload(){
-                var popup = window.open('./download/beauty.html', '프로그램 설치', 'width=500px, height=500px,scrollbars=yes');
+                var popup = window.open('./download/beauty.html', '프로그램 설치', 'width=500px, height=500px,scrollbars=no,resizeable=yes');
             }
             </script>
         <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
