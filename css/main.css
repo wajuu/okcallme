@@ -1936,7 +1936,7 @@ width: 66.66666667%;
 .shoppingCart .count-box button .numBox{
     font-size: 1em;
 }
-.shoppingCart img{
+.shoppingCart #productImage img{
     height: 100px;
 }
 .shoppingCart .total{
@@ -2027,6 +2027,7 @@ width: 66.66666667%;
     padding: 10px 10px 10px 0;
     text-align: left;
 }
+
 .infoBody .infoTable tr:last-child, .infoBody .paymentTable tr:last-child{
     border-bottom: 3px solid #cde3f7;
 }
@@ -2081,13 +2082,16 @@ width: 66.66666667%;
 .infoBox #totalPayment{
     color: #f00;
 }
+
 .infoBody .paymentTable td{
-    text-align: center;
+    text-align: center;   
 }
 
 .infoBody .paymentTable #noRecord td{
     padding: 50px 0;
+
 }
+
 .infoBody .warning{
     text-align: left;
     font-size: 0.9em;
