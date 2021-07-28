@@ -203,7 +203,7 @@ body {
     
 }
 .nav-login #myInfo, .nav-login #logout{
-    padding: 5px 10px;
+    padding: 5px 5px;
     box-shadow: 0 0 3px #777;
     background: #f5f4f4;
 
