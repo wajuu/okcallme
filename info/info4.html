@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex, nofollow">
+    
+    <link rel="stylesheet" type="text/css" media="screen and (max-width:766px)" href="../css/phone.css">
+    <link rel="stylesheet" type="text/css" media="screen and (min-width:767px)" href="../css/main.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="../js/motion.js"></script>
+    <script src="https://kit.fontawesome.com/115e3e852e.js" crossorigin="anonymous"></script>
+
+
+    <title>콜신져</title>
+
+
+
+</head>
+
+<body>
+
+    <div id="wrap">
+
+        <!-- header -->
+        <div id="header">
+            <!-- 관리자페이지 -->
+            <div class="admin">
+                <ul class="admin-list xs-text">
+                    <li><a href="">프랜차이즈</a></li>
+                    <li><a href="">광고주영역</a></li>
+                    <li><a href="">관리자</a></li>
+                    <li><a href="#" onclick="window.history.back(-1)"><i class="fas fa-undo"></i>뒤로가기</a></li>
+                </ul>
+            </div>
+
+            <!-- 로고박스 -->
+            <div class="menu-list-box">
+                <div class="logo-box">
+                    <a href="../index.html"><img src="../img/logo.png" alt="logo"></a>
+                </div>
+                <!-- 메인메뉴 -->
+                <div class="nav">
+                    <ul class="nav-list s-text">
+                        <li class="main-menu"><a href="../1-1.html">콜신져 POS</a>
+                            <ul class="dropdown first-drop">
+                                <li><a class="s-text" href="../1-1.html">편리한 기능</a></li>
+                                <li><a class="s-text" href="../1-2.html">다른 프로그램</a></li>
+                            </ul>
+                        </li>
+                        <li class="main-menu"><a href="../2-2.html">사용방법</a>
+                            <ul class="dropdown">
+                                <li><a class="s-text" href="../2-2.html">요금 및 할인</a></li>
+                                <li><a class="s-text" href="../2-3.html">주변장치 소개</a></li>
+                            </ul>
+                        </li>
+                        <li class="main-menu"><a href="../4-1.html">배달/주문 연동</a>
+                            <ul class="dropdown">
+                                <li><a class="s-text" href="../4-1.html">배달앱/주문대행</a></li>
+                                <li><a class="s-text" href="../4-2.html">배달 공공앱</a></li>
+                                <li><a class="s-text" href="../4-3.html">프랜차이즈 제휴사</a></li>
+                            </ul>
+                        </li>
+                        <li class="main-menu"><a href="../support.html">고객센터</a></li>
+                        <li class="main-menu"><a href="../shop.html">쇼핑몰</a></li>
+                    </ul>
+                </div>
+                <div class="nav nav-login">
+                    <ul>
+                        <li id="login">
+                            <a class="s-text" href="#">로그인/회원가입</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 모바일 -->
+            <div class="phone-main deskNo">
+                <div class="header">
+                    <div class="logo-box" id="logo-box">
+                        <a href="../index.html"><img src="../img/logo.png" alt="logo"></a>
+                    </div>
+                    <div class="menu_btn"><a href="#">
+                            <img src="../img/mobile/menu.png" alt="menu">
+                        </a>
+                    </div>
+                </div>
+
+                <div class="menu_bg"></div>
+                <div class="sidebar_menu">
+                    <div class="close_btn"><a href="#">
+                            <img src="../img/mobile/close.png" alt="menu">
+                        </a>
+                    </div>
+                    <ul class="menu_wrap">
+                        <li><a class="m-text" href="../1-1.html">콜신져 POS</a></li>
+                        <li><a class="m-text" href="../1-2.html">다른 프로그램</a></li>
+
+                        <li><a class="m-text" href="../2-2.html">사용 방법</a>
+                            <ul>
+                                <li><a class="s-text" href="../2-2.html">요금 및 할인</a></li>
+                                <li><a class="s-text" href="../2-3.html">주변 장치 소개</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="m-text" href="../4-1.html">배달/주문 연동</a></li>
+                        <li><a class="m-text" href="../support.html">고객센터</a></li>
+                        <li><a class="m-text" href="../shop.html">쇼핑몰</a></li>
+                    </ul>
+                </div>
+            </div>
+            <!-- 서브메뉴 -->
+            <div class="subMenu subMenu3 phoneNo">
+                <ul class="list">
+                    <li class="title">나의정보보기&nbsp;&nbsp;<i class="fas fa-chevron-right"></i></li>
+                    <li><a href="info1.html">사업자정보수정</a></li>
+                    <li><a href="info2.html">회원정보수정</a></li>
+                    <li><a href="info3.html">비밀번호변경</a></li>
+                    <li class="selected"><a href="info4.html">결제내역</a></li>
+                    <li><a href="info5.html">나의 가상계좌</a></li>
+                    <li><a href="info6.html">마일리지</a></li>
+                    <li><a href="info7.html">회원탈퇴</a></li>
+                </ul>
+            </div>
+        </div>
+
+
+        <div id="container">
+            <div class="infoBox">
+                <div class="info-payment">
+                    <div class="title">
+                        <p class="point-text">결제 내역</p>
+                    </div>
+                    <div class="infoText">
+                        <h2>고객님의 총 결제금액은 <span id="totalpayment" style="color: #f00;">20,000 원</span> 입니다.</h2>
+                        <p>- ㈜꿈과행복의 전자세금계산서 발급방식은 전산시스템을 통한 자동발급방식으로 고객결제 후 7~10일 안에 발행됩니다.</p>
+                        <p>- 전자세금계산서의 확인이 불가한 경우 전자세금계산서 발행예정월의 익월 10일까지 본사(1566-2636)로 연락바랍니다</p>
+                    </div>
+                    <div class="infoBody">
+                        <table class="paymentTable">
+                            <tr>
+                                <td class="title">번호</td>
+                                <td class="title">결제일자</td>
+                                <td class="title">결제내역</td>
+                                <td class="title">금액(원)</td>
+                                <td class="title">수량</td>
+                                <td class="title">구매내역</td>
+                            </tr>
+                            <tr>
+                                <td><span id="number"></span></td>
+                                <td id="payDate"></td>
+                                <td id="payList"></td>
+                                <td id="purchasePrice"></td>
+                                <td id="purchaseQuantity"></td>
+                                <td id="purchaseList"></td>
+                            </tr>
+                            <tr id="noRecord">
+                                <td colspan="6">
+                                    <p>결제내역이 없습니다.</p>
+                                </td>
+                            </tr>
+                        </table>
+                         <!-- 내역 많을 때 화살표-->
+                        <div class="pageArrow">
+                            <button><i class="fas fa-angle-double-left"></i></button>
+                            <div id="listNum"><a href=""><span>1</span></a></div>
+                            <button><i class="fas fa-angle-double-right"></i></button>
+                        </div>
+    
+                        <div class="warning">
+                            <h2>**주의사항</h2>
+                            <p>1. 전자세금계산서 발행 결과는 사업자정보에 입력된 이메일로 발송되며,
+                                사업자정보수정사항이 있을 시 <br> &nbsp;&nbsp; <a href="info1.html">홈페이지 나의 정보보기> 사업자정보수정</a>에서 변경바랍니다.</p>
+                            <p>2. 본인의 모든 세금계산서 발행 현황(매입매출)은 국세청 홈택스 홈페이지에서 조회가능합니다.
+                                <br> &nbsp;&nbsp;<a href="www.hometax.go.kr">(홈텍스 홈페이지 www.hometax.go.kr)</a></p>
+                            <p>3. 부가세분기 마감 이후 전자세금계산서의 발행 및 수정은 불가합니다.</p>
+                        </div>
+                        <div class="period">
+                            <div>＊ <span>해당년 01월 ~ 03월</span>까지의 결제건 - <strong>당년 04월10일</strong>까지</div>
+                            <div>＊ <span>해당년 04월 ~ 06월</span>까지의 결제건 - <strong>당년 04월10일</strong>까지</div>
+                            <div>＊ <span>해당년 07월 ~ 09월</span>까지의 결제건 - <strong>당년 04월10일</strong>까지</div>
+                            <div>＊ <span>해당년 10월 ~ 12월</span>까지의 결제건 - <strong>당년 04월10일</strong>까지</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+ 
+    </div>
+
+    <!-- 고정 사이드 메뉴 -->
+    <div class="go-top"></div>
+    <div class="support-menu">
+        <table class="scroll-group" id="scroll-group">
+            <tr>
+                <td>
+                    <table class="scroll-group">
+                        <tr>
+                            <td class="scroll" id="scroll1">
+                                <a target="_blank" href="https://m.blog.naver.com/PostList.naver?blogId=okcallme_com">
+                                    <img src="../img/blog.png" style="width: 35px;" alt="blog">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="scroll" id="scroll2">
+                                <a onclick="alert('회원가입 후 이용가능합니다');" style="cursor:pointer">
+                                    <img src="../img/shopping.png" style="width: 35px;" alt="shop">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="scroll" id="scroll3">
+                                <a style="cursor:pointer">
+                                    <img src="../img/human.png" style="width: 45px;" alt="support">
+                                    <p class="point-text">?</p>
+                                </a>
+                                <table id="hidden-scroll">
+                                    <tr>
+                                        <td class="scroll hidden-scroll">
+                                            <a onclick="alert('회원가입 후 이용가능합니다');" style="cursor:pointer">
+                                                원격<br>지원
+                                            </a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="scroll hidden-scroll">
+                                            <a onclick="alert('회원가입 후 이용가능합니다');" style="cursor:pointer">이체<br>신청</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="scroll hidden-scroll">
+                                            <a onclick="alert('회원가입 후 이용가능합니다');" style="cursor:pointer">결제<br>내역</a>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td class="scroll hidden-scroll">
+                                            <a href="../support4.html" style="cursor:pointer">입금<br>문의</a>
+                                        </td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <!-- footer -->
+    <div id="foot">
+        <footer>
+            <div class="footer-border">
+                <ul>
+                    <li><a
+                            href="javascript:window.open('rule01.html','info01','width=800,height=680,scrolling=no,left=0,top=0');">·
+                            개인정보취급방침</a></li>
+                    <li><a
+                            href="javascript:window.open('rule02.html','info01','width=800,height=680,scrolling=no,left=0,top=0');">·
+                            이용약관</a></li>
+                    <li><a href="../intro.html">· 회사소개</a></li>
+                </ul>
+            </div>
+            <div class="bottom-group">
+                <img src="../img/logo.png" alt="logo" style="filter: grayscale(100%);">
+                <div class="explain">
+                    <p>
+                        (주)꿈과행복 | 대표자 이상열 | 서울시 금천구 디지털로 130 (가산동, 남성프라자 709호)<br>
+                        팩스 02-2104-0489 | 웹FAX 0505-986-0489<br>
+                        사업자등록번호 119-85-25957 | 통신판매업신고 제 2014-서울금천-0666호
+                    </p>
+                    <hr>
+                    <p class="copyright">CopyRight ⓒ2015 (주)꿈과행복 ALL RIGHT RESERVED</p>
+                </div>
+                <a onclick="alert('회원가입 후 이용가능합니다');" style="cursor:pointer" class="remoteFooter" href="">
+                    원격지원 연결
+                </a>
+                <div class="banner">
+                    <div>
+                        <script
+                            src="https://seal.thawte.com/getthawteseal?host_name=www.okcallme.com&amp;size=L&amp;lang=ko">
+                        </script>
+                        <a href="http://www.thawte.com/ssl-certificates/" target="_blank"
+                            style="color:#000000; text-decoration:none; font:bold 10px arial,sans-serif; margin:0px; padding:0px;">
+                            SSL 인증서 정보
+                        </a>
+                    </div>
+                    <img id="mark" src="../img/escrowcmark.gif" alt="escrowcmark">
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- javascript -->
+    <div id="script" style="display: none;">
+
+    <!--go-up-->
+    <script>
+        $(window).scroll(function () {
+            var quickHeight = $(document).scrollTop(); //스크롤 높이가 500 이상이면 나타나기
+            if (200 <= quickHeight) {
+                $('.go-top').css('display', 'block');
+            } else {
+                $('.go-top').css('display', 'none');
+            }
+        });
+
+        $('.go-top').click(function () { //위로가기 버튼을 클릭했을때
+            $('html, body').animate({
+                scrollTop: '0'
+            }, 800);
+        });
+    </script>
+        <!-- rolling banner -->
+        <script>
+            //current position
+            var pos = 0;
+            //number of slides
+            var totalSlides = $('#slider-wrap ul li').length;
+            //get the slide width
+            var sliderWidth = $('#slider-wrap').width();
+
+
+            $(document).ready(function () {
+
+
+                /*****************
+                 BUILD THE SLIDER
+                *****************/
+                //set width to be 'x' times the number of slides
+                $('#slider-wrap ul#slider').width(sliderWidth * totalSlides);
+
+                //next slide 	
+                $('#next').click(function () {
+                    slideRight();
+                });
+
+                //previous slide
+                $('#previous').click(function () {
+                    slideLeft();
+                });
+
+
+
+                /*************************
+                 //*> OPTIONAL SETTINGS
+                ************************/
+                //automatic slider
+                var autoSlider = setInterval(slideRight, 3000);
+
+                //for each slide 
+                $.each($('#slider-wrap ul li'), function () {
+
+                    //create a pagination
+                    var li = document.createElement('li');
+                    $('#pagination-wrap ul').append(li);
+                });
+
+                //counter
+                countSlides();
+
+                //pagination
+                pagination();
+
+                //hide/show controls/btns when hover
+                //pause automatic slide when hover
+                $('#slider-wrap').hover(
+                    function () {
+                        $(this).addClass('active');
+                        clearInterval(autoSlider);
+                    },
+                    function () {
+                        $(this).removeClass('active');
+                        autoSlider = setInterval(slideRight, 3000);
+                    }
+                );
+
+
+
+            }); //DOCUMENT READY
+
+
+
+            /***********
+             SLIDE LEFT
+            ************/
+            function slideLeft() {
+                pos--;
+                if (pos == -1) {
+                    pos = totalSlides - 1;
+                }
+                $('#slider-wrap ul#slider').css('left', -(sliderWidth * pos));
+
+                //*> optional
+                countSlides();
+                pagination();
+            }
+
+
+            /************
+             SLIDE RIGHT
+            *************/
+            function slideRight() {
+                pos++;
+                if (pos == totalSlides) {
+                    pos = 0;
+                }
+                $('#slider-wrap ul#slider').css('left', -(sliderWidth * pos));
+
+                //*> optional 
+                countSlides();
+                pagination();
+            }
+
+
+
+
+            /************************
+             //*> OPTIONAL SETTINGS
+            ************************/
+            function countSlides() {
+                $('#counter').html(pos + 1 + ' / ' + totalSlides);
+            }
+
+            function pagination() {
+                $('#pagination-wrap ul li').removeClass('active');
+                $('#pagination-wrap ul li:eq(' + pos + ')').addClass('active');
+            }
+        </script>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    </div>
+
+
+</body>
