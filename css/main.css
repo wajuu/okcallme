@@ -202,6 +202,12 @@ body {
     padding: 2px 15px;
     
 }
+.nav-login #myInfo, .nav-login #logout{
+    padding: 5px 10px;
+    box-shadow: 0 0 3px #777;
+    background: #f5f4f4;
+
+}
 .dropdown{
     background-color: #fff;
     color: #000000;
@@ -276,9 +282,21 @@ body {
 .subMenu2 li{
     width: 130px;
 }
+.subMenu3 li{
+    width: 110px;
+}
 .subMenu li a{
     width: 120px;
     padding: 10px;
+}
+.subMenu .title{
+    width: 150px;
+    background: none;
+    box-shadow: none;
+    font-weight: 700;
+    font-size: 1.3em;
+    color: #448aca;
+
 }
 /* .subMenu li:hover, .subMenu .selected{
     background: #cde3f7;
@@ -717,21 +735,21 @@ body {
     width: 70%;
 }
 
-.content1{
+.content1, .content1-1{
     display: inline-block;
     width: calc(100vw - 200px);
     height: 100vh;
     text-align: center;
 }
 
-.content1-1{
+.main-wrapper .content1-1{
     height: calc(100vh - 110px);
     padding-top: 110px;
+    padding-bottom: 110px;
 }
 .content1-1 .content-table{
     padding-top: 15px;
 }
-
 .content-table{
     width: 50vw;
     margin: 0 auto;
@@ -774,11 +792,13 @@ body {
     margin: 0 auto;
     padding-bottom: 20px;
 }
-.content-program{
+.content-program, .content-use{
     width: 100vw;
     height: 100%;
     min-height: 100vh;
-    padding-top: 70px;
+}
+.content-program .content-table{
+    padding: 10vh 0 11vh;
 }
 .content-table .program-table{
     display: inline-flex;
@@ -816,6 +836,9 @@ body {
 }
 
 /*사용방법*/
+.content-use{
+    padding-top: 90px;
+}
 .test-page{
     width: 100vw;   
     padding-top: 30px;
@@ -911,9 +934,7 @@ body {
     font-size: 1.1em;
     line-height: 1.5em;
 }
-.equipment{
-    padding-top: 30px;
-}
+
 .equipment>.l-text{
     padding: 30px 0 20px 0;
 }
@@ -1374,7 +1395,7 @@ width: 66.66666667%;
     background-size: cover;
 }
 .shop-box .shop-banner .text{
-    width: 25%;
+    width: 345px;
     height: 350px;
     display: inline-flex;
     justify-content: center;
@@ -1500,6 +1521,7 @@ width: 66.66666667%;
 
 .shop-list{
     display: inline-flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100vw;
@@ -1526,7 +1548,7 @@ width: 66.66666667%;
     font-weight: 700;
 }
 .shop-list .hover-icon{
-    background: #cde3f7;
+    background: #fff;
     width: 270px;
     height: 193px;
     position: absolute;
@@ -1537,27 +1559,68 @@ width: 66.66666667%;
 .shop-list .hover-icon i{
     padding: 32% 0;
     z-index: 2;
-    font-size: 5em;
+    font-size: 2.5em;
     color: #448aca;
     transform: scale(1);
     transition: all .3s linear;
+}
+.shop-list .hover-icon i::after{
+    content: "";
+    font-size: 1em;
+}
+.shop-list3 .hover-icon i::after{
+    content: "제품상세";
+    font-size: 1em;
+}
+.shop-detail .hover-icon i::after{
+    content: "이미지보기";
+    font-size: 1em;
 }
 .shop-list a:hover .hover-icon{
     opacity: 1;
 }
 .shop-list a:hover .hover-icon i{
-    font-size: 3em;
+    font-size: 2em;
     transform: scale(1);
 }
-
-.shop-list .a-box{
+.shop-list .pointBox{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 100vw;
+}
+.shop-list .pointBox a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 105px;
+    padding: 0 2px;
+    background: #448aca;
+}
+.shop-list .pointBox a:hover img{
+    opacity: 0.7;
+}
+.shop-list .pointBox img{
+    width: auto;
+    height: 80px;
+    margin: 0;
+}
+.shop-list .a-box, .shop-list .a-box-list{
     display: inline-flex;
 }
 .shop-list a:hover img{
     opacity: 0.3;
 }
+.shop-list .section-3{
+    display: inline-flex;
+    justify-content: center;
+    width: 100vw;
+}
 .shop-list .section-4{
     display: inline-flex;
+    flex-wrap: wrap;
     width: 100vw;
     height: 200px;
     justify-content: center;
@@ -1579,7 +1642,7 @@ width: 66.66666667%;
 
 }
 .shop-list .section-4 .a-box-title{
-    width: 230px;
+    width: 150px;
     height: 100px;
     display: inline-flex;
     flex-direction: column;
@@ -1822,6 +1885,308 @@ width: 66.66666667%;
 .shop-detail .detail-info .m-text{
     font-size: 1em;
 }
+
+/*장바구니*/
+.basketWrap{
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.basketWrap .s-text{
+    width: 70vw;
+    text-align: left;
+}
+.shoppingCart .cartTable{
+    width: 70vw;
+    margin-top: 30px;
+    text-align: center;
+    border-collapse: collapse;
+}
+.shoppingCart td{
+    border-bottom: 1px solid #dedede;
+    font-size: 0.9em;
+}
+.shoppingCart th{
+    padding: 10px 0;
+    border-collapse: collapse;
+    border-bottom: 1px solid #19b0bb;
+}
+.shoppingCart tr:first-child{
+
+    color: #18a0aa;
+    font-weight: 500;
+}
+.shoppingCart .count-icon{
+    width: 100%;
+    height: 100%;
+}
+
+.shoppingCart .count-icon .count-box {
+    width: 120px;
+    height: 40px;
+}
+
+.shoppingCart .count-box button{
+    width: 20px;
+    height: 30px;
+    font-size: 0.8em;
+
+}
+.shoppingCart .count-box button .numBox{
+    font-size: 1em;
+}
+.shoppingCart img{
+    height: 100px;
+}
+.shoppingCart .total{
+    padding-top: 20px;
+    text-align: right;
+    color: #ff0000;
+}
+.basketWrap .choice button{
+    padding: 5px 15px;
+    font-size: 1em;
+    font-weight: 700;
+    color: #fff;
+    background: #19b0bb;
+    cursor: pointer;
+}
+.basketWrap #delete{
+    background: #fff;
+    cursor: pointer;
+}
+.basketWrap .howTo {
+    padding-top: 50px;
+}
+.basketWrap .howTo .xs-text{
+    padding-top: 20px;
+}
+.cartTable td:first-child, .cartTable td:nth-child(5){
+    width: 15%;
+}
+.cartTable td:nth-child(2), .cartTable td:nth-child(3){
+    width: 25%;
+}
+.cartTable td:nth-child(4){
+    width: 15%;
+}
+.cartTable td:nth-child(6){
+    width: 5%;
+    font-size: 1em;
+}
+/*개인정보페이지*/
+
+.infoBox{
+    width: 100vw;
+    padding: 50px 0 100px 0;
+    display: inline-flex;
+    justify-content: center;
+
+}
+.infoBox .info-sBox, .infoBox .info-payment{
+    display: inline-flex;
+    flex-direction: column;
+}
+.infoBox .info-payment{
+    width: 55vw;
+}
+.infoBox .title{
+    padding: 50px 0 30px 0;
+}
+.infoBox .title p{
+    background: #448aca;
+    color: #fff;
+    width: max-content;
+    padding: 10px 30px;
+    border-radius: 30px;
+}
+.infoBox .infoText{
+    font-size: 0.9em;
+    line-height: 1.5em;
+}
+.infoBox .infoText h2{
+    font-size: 1.3em;
+    padding-bottom: 10px;
+}
+
+.infoBox .infoBody{
+    margin: 0 auto;
+    padding-top: 50px;
+    text-align: center;
+}
+.infoBody .infoTable{
+    width: 40vw;
+    text-align: center;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    margin-bottom: 20px;
+}
+
+.infoBody .infoTable td, .infoBody .paymentTable td{
+    padding: 10px 10px 10px 0;
+    text-align: left;
+}
+.infoBody .infoTable tr:last-child, .infoBody .paymentTable tr:last-child{
+    border-bottom: 3px solid #cde3f7;
+}
+.infoBody .infoTable tr:first-child, .infoBody .paymentTable tr:first-child{
+    background: #cde3f7;
+}
+.infoBox .infoTable .title{
+    width: 23%;
+    padding-left: 10px;
+}
+.infoBox .infoTable span{
+    margin: 0 5px;
+    font-size: 0.8em;
+}
+.infoBox .infoTable input, .infoBody .infoTable select{
+    box-shadow: 0 0 2px #000;
+    padding: 2px 5px;
+}
+.infoBody .submit{
+    background: #448aca;
+    color: #fff;
+    padding: 5px 15px;
+    width: 150px;
+    cursor: pointer;
+}
+.infoBox [id^='phoneNumber']{
+    width: 50px;
+}
+.infoBox [id^='address']{
+    width: 60px;
+}
+.infoBox .address{
+    display: inline-flex;
+    width: 100%;
+    flex-direction: column;
+}
+.infoBox .address input{
+    margin: 3px 0;
+}
+.infoBox .address button{
+    margin-left: 10px;
+    padding: 2px 5px;
+    box-shadow: 0 0 2px #000;
+}
+.infoBox .paymentTable{
+    width: 55vw;
+    text-align: center;
+    border-collapse: collapse;
+    font-size: 0.9em;
+    margin-bottom: 30px;
+}
+.infoBox #totalPayment{
+    color: #f00;
+}
+.infoBody .paymentTable td{
+    text-align: center;
+}
+
+.infoBody .paymentTable #noRecord td{
+    padding: 50px 0;
+}
+.infoBody .warning{
+    text-align: left;
+    font-size: 0.9em;
+    border: 1.5px solid #18a0aa;
+    padding: 10px 15px;
+}
+.infoBody .warning h2{
+    color: #18a0aa;
+    font-size: 1.2em;
+    padding-bottom: 10px;
+}
+.infoBody .warning p{
+    line-height: 1.5em;
+}
+.infoBody .warning a{
+    text-decoration: underline #19b0bb;
+    color: #448aca;
+}
+.infoBody .period{
+    display: inline-flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-top: 10px;
+    width: 55vw;
+}
+.infoBody .period div{
+    padding: 5px 0;
+    font-size: 0.8em;
+    width: 27.5vw;
+}
+.infoBody .period span{
+    color: #448aca;
+}
+.infoBody .period strong{
+    color: #f00;
+}
+.infoBody>p{
+    text-align: left;
+    padding-bottom: 10px;
+    font-size: 0.9em;
+}
+.infoBox .pageArrow{
+    display: inline-flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+.infoBox .pageArrow button{
+    cursor: pointer;
+    background: none;
+    padding: 0 3px;
+    box-shadow: 0 0 2px #000;
+}
+.infoBox .pageArrow #listNum span{
+    padding: 0 10px;
+}
+.infoBox .warning-delete{
+    text-align: center;
+    border: 2px solid #18a0aa;
+    padding: 20px;
+}
+.infoBox .warning-delete h2 {
+    padding-bottom: 10px;
+    font-size: 1.3em;
+}
+.infoBox .warning-delete strong {
+    color: #448aca;
+}
+.infoBox .warning-delete h1{
+    color: #f00;
+    font-size: 1.7em;
+}
+.infoBody .delete-table{
+    text-align: left;
+    padding-bottom: 30px;
+}
+.infoBody .delete-table td{
+    padding: 10px;
+    
+}
+.infoBody .delete-table .number{
+    font-size: 2.5em;
+    font-weight: 900;
+    color:#f00;
+    vertical-align: top;
+}
+.infoBody .delete-table td p{
+    line-height: 1.5em;
+}
+.infoBody #agree, .infoBody #disagree{
+    padding: 5px 10px;
+    font-size: 1.1em;
+    box-shadow: 0 0 2px #000;
+    margin: 0 10px;
+    cursor: pointer;
+}
+.infoBody #agree{
+    font-weight: 900;
+}
+
 /*fixed banner*/
 
 .go-top{
@@ -2200,7 +2565,8 @@ footer .remoteFooter{
     padding-top: 10px;
 }
 .download-text .exp1{
-    font-size: 1.5em;
+    width: 100%;
+    font-size: 1.4em;
     text-align: center;
     color: red;
 }
