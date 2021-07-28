@@ -4,13 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- SEO: 검색엔진 최적화[s] -->
-    <meta name="description"
-        content=" 대한민국 NO.1 고객관리 프로그램 콜신져, 클라우드 방식으로 주문저장 데이터 분실위험을 낮추고 지속적인 프리미엄 기능 업데이트까지! 대표 기능 마스터 ">
-    <meta name="keywords"
-        content="콜신져, 고객관리, pos, 포스, 포스프로그램, 마스터, 뷰티, 뷰티플러스, 상담관리, 콜센터, 배달, 음식점, 매장, 꿈과행복, 배달대행, 포스피드, cid, 콜스타, 부르미, 창업">
-    <meta name="author" content="꿈과행복,콜신져">
-    <meta name="robots" content="index, follow">
+    <meta name="robots" content="noindex, nofollow">
 
     <!-- 오픈그래프 //-->
     <meta property="og:title" content="(주)꿈과행복,콜신져">
@@ -102,7 +96,7 @@
 
         </div>
 
-
+        
         <div id="container">
             <div class="shop-box">
                 <div class="shop-wrapper">
@@ -111,7 +105,7 @@
                             <li><a href="../shop-cid.html">CID발신번호장치</a></li>
                             <li><a href="../shop-print.html">영수증프린터</a></li>
                             <li><a href="../shop-pos.html">POS시스템</a></li>
-                            <li><a class="selected2" href="../shop-card.html">카드 단말기</a></li>
+                            <li><a href="../shop-card.html">카드 단말기</a></li>
                             <li><a href="../shop-etc-1.html">기타 장치</a></li>
                             <li><a href="../shop-etc-2.html">기타 업소용품</a></li>
                             <li><a href="../shop-point.html">마일리지</a></li>
@@ -128,7 +122,7 @@
                             </a>
                         </div>
                         <div>
-                            <a href="basket.html">
+                            <a href="./shop/basket.html">
                                 <img src="../img/shopping/shopping-basket.png" alt="basket">
                                 <p class="xs-text">장바구니</p>
                             </a>
@@ -136,121 +130,71 @@
                     </div>
                     <div class="shop-title-box">
                         <div class="shop-s-title shop-s-title-left">
-                            <p class="point-text">카드 단말기</p>
+                            <p class="point-text">장바구니</p>
                         </div>
                         <div>
-                            <a href="../shop-card.html">
-                                <h6 class="s-text"><i class="fas fa-arrow-circle-left"></i>&nbsp;목록으로 돌아가기</h6>
+                            <a href="#" onclick="window.history.back(-1)">
+                                <h6 class="s-text"><i class="fas fa-arrow-circle-left"></i>&nbsp;뒤로가기</h6>
                             </a>
                         </div>
                     </div>
-
-
-                    <div class="shop-list shop-detail">
-                        <div class="section-list">
-                            <div class="a-box-list">
-                                <a onclick="openDetail();" class="pic-area" href="#">
-                                    <div>
-                                        <div class="hover-icon hover-icon2"><i class="fas fa-search"></i></div>
-                                        <img src="../img/shopping/shop-list4-02.png" alt="shop">
-                                    </div>
-                                </a>
-                                <div class="title-area">
-                                    <div class="basket-icon buy-icon"><a href="">
-                                            <div><i class="fas fa-coins"></i>
-                                            </div>
-                                            <span>바로구매</span>
-                                        </a></div>
-                                    <div class="basket-icon"><a href="">
-                                            <div><i class="fas fa-shopping-basket"></i>
-                                            </div>
-                                            <span>장바구니</span>
-                                        </a></div>
-                                    <div class="count-icon" style="padding-left: 40px; width: 400px;">
-                                        <div>
-                                            <span>수량</span>
-                                            <div class="count-box">
-                                                <button type="button" class="minus"><i
-                                                        class="fas fa-minus"></i></button>
-                                                <input type="number" class="numBox" min="1" max="99" value="1" readonly
-                                                    style="width:50px;font-size: 1.8em; text-align: center; background-color: #dedede; border-radius: 50px;" />
-                                                <button type="button" class="plus"><i class="fas fa-plus"></i></button>
+                    <div class="basketWrap">
+                        <div class="s-text">
+                            <p>고객님이 선택하신 상품입니다.</p>
+                        </div>
+                        <div class="shoppingCart">
+                            <table class="cartTable">
+                                <tr>
+                                    <th>상품</th>
+                                    <th>제품명</th>
+                                    <th>모델명</th>
+                                    <th>판매가격</th>
+                                    <th>수량</th>
+                                    <th>삭제</th>
+                                </tr>
+                                <tr>
+                                    <td><img src="../img/shopping/shop-list-01.png" alt="shop"></td>
+                                    <td>콜스타 USB 1회선</td>
+                                    <td>콜스타(CTI-120)</td>
+                                    <td>66,000원<p class="deliveryFee">(무료배송)</p></td>
+                                    <td>
+                                        <div class="count-icon">
+                                            <div>
+                                                <div class="count-box">
+                                                    <button type="button" class="minus"><i class="fas fa-minus"></i></button>
+                                                    <input type="number" class="numBox" min="1" max="99" value="1" readonly style="width:40px;font-size: 1.2em; text-align: center; background-color: #dedede; border-radius: 50px;"/>
+                                                    <button type="button" class="plus"><i class="fas fa-plus"></i></button>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <script>
-                                        $(".plus").click(function () {
-                                            var num = $(".numBox").val();
-                                            var plusNum = Number(num) + 1;
-
-                                            if (plusNum >= 99) {
-                                                $(".numBox").val(num);
-                                            } else {
-                                                $(".numBox").val(plusNum);
-                                            }
-                                        });
-
-                                        $(".minus").click(function () {
-                                            var num = $(".numBox").val();
-                                            var minusNum = Number(num) - 1;
-
-                                            if (minusNum <= 0) {
-                                                $(".numBox").val(num);
-                                            } else {
-                                                $(".numBox").val(minusNum);
-                                            }
-                                        });
-                                    </script>
-
-                                    <h2 class="m-text">스마트폰용 체크기</h2>
-                                    <h2 class="m-text">(이어폰 연결형 카드결제기)</h2>
-                                    <h6 class="s-text">-</h6>
-                                    <h6 class="xs-text">모델명 : KIS-SM300(SWIPE)</h6>
-                                    <h2 class="m-text price">66,000원</h2>
-                                </div>
+                                    </td>
+                                    <td>
+                                        <button id="delete" onclick="alert('삭제되었습니다.')">삭제</button>
+                                    </td>
+                                </tr>
+                            </table>
+                            <div class="total">
+                                <span>합계(부가세 포함) :</span>
+                                <span id="total">000원</span>
                             </div>
                         </div>
-                        <div class=" detail-pic">
-                            <div>
-                                <p class="m-text">제품상세</p>
-                            </div>
-                            <div class="main-line3"></div>
-                            <img src="../img/shop-details/스와이프.png" alt="details">
+                        <div class="choice">
+                            <button>바로구매하기</button>
+                            <button>쇼핑계속하기</button>
                         </div>
-                        <div class="detail-info">
-                            <div>
-                                <p class="m-text">배송정보</p>        
-                            </div>
-                            <div>
-                                <p class="m-text contents" style="color: #424242;">	
-                                    결제 확인후 택배로 배송하게됩니다. <br>
-                                    A/S시에는 탁송료가 부가됩니다.</p>
-                            </div>
-                            <div class="main-line3"></div>
+                        <div class="howTo">
+                            <p class="s-text">장바구니 이용안내</p>
+                            <p class="xs-text">
+                                * 상품을 주문하시려면 바로구매하기 버튼을 누르세요. <br><br>
+                                * 쇼핑계속하기 버튼을 누르시면 쇼핑하시던 페이지로 이동합니다.<br><br>
+                                * 상품을 취소하시려면 삭제 버튼을 누르세요.<br><br>
+                                * 주문수량을 변경하시려면 수량을 바꾸신 후 수정 버튼을 누르세요.
+                            </p>
                         </div>
-                        <div class="detail-info">
-                            <div>
-                                <p class="m-text">결제정보</p>        
-                            </div>
-                            <div>
-                                <p class="m-text pay-info">무통장입금</p>
-                                <p class="m-text contents2" style="color: #424242;">	
-                                    아래에 은행계좌로 인터넷이나 폰뱅킹, 또는 직접 은행에 가시어 결제를 하시면 됩니다.</p>
-                            </div>
-                            <div>
-                                <p class="m-text pay-info">은행명 / 계좌번호</p>
-                                <p class="m-text contents2" style="color: #424242;">	
-                                    <strong>예금주 : 꿈과행복 <br> 농협 301-0057-4221-41</strong></p>
-                            </div>
-                            <div>
-                                <p class="m-text contents2" style="color: #424242;">	
-                                    ※ 무통장으로 입금하실때에는 "보내시는 분"에는 꼭 홈페이지에 가입되신 실명 또는 아이디로 입금하여 주시기 바라며,
-부득이하게 다른분 이름으로 입금하실때에는 입금 하신후, <br> <strong>"070-4633-3498"</strong>으로 꼭!! 확인 전화 주시기 바랍니다.</p>
-                            </div>
-                            <div class="main-line3"></div>
-                        </div>
+
                     </div>
+
+                    
                 </div>
             </div>
         </div>
@@ -305,31 +249,48 @@
 
     <!-- javascript -->
     <div id="script" style="display: none;">
-        <!--go-up-->
-        <script>
-            $(window).scroll(function () {
-                var quickHeight = $(document).scrollTop(); //스크롤 높이가 500 이상이면 나타나기
-                if (200 <= quickHeight) {
-                    $('.go-top').css('display', 'block');
-                } else {
-                    $('.go-top').css('display', 'none');
-                }
-            });
+    <!--go-up-->
+    <script>
+        $(window).scroll(function () {
+ var quickHeight=$(document).scrollTop(); //스크롤 높이가 500 이상이면 나타나기
+ if (200 <= quickHeight ) {
+   $('.go-top').css('display','block');
+  }else {
+    $('.go-top').css('display','none');
+  }
+});
 
-            $('.go-top').click(function () { //위로가기 버튼을 클릭했을때
-                $('html, body').animate({
-                    scrollTop: '0'
-                }, 800);
-            });
-        </script>
-
-        <!-- 상품 확대 사진 -->
-        <script>
-            function openDetail(){
-        var popup = window.open('./detail/product4-4-2.html', '제품 상세 이미지', 'width=650px, height=500px, scrollbars=no');
-    }
-        </script>
-        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+$('.go-top').click(function(){//위로가기 버튼을 클릭했을때
+  $('html, body').animate({
+    scrollTop: '0'
+  }, 800);
+});
+    </script>
+    <!-- 수량카운트 -->
+    <script>
+        $(".plus").click(function(){
+         var num = $(".numBox").val();
+         var plusNum = Number(num) + 1;
+         
+         if(plusNum >= 99) {
+          $(".numBox").val(num);
+         } else {
+          $(".numBox").val(plusNum);          
+         }
+        });
+        
+        $(".minus").click(function(){
+         var num = $(".numBox").val();
+         var minusNum = Number(num) - 1;
+         
+         if(minusNum <= 0) {
+          $(".numBox").val(num);
+         } else {
+          $(".numBox").val(minusNum);          
+         }
+        });
+       </script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
     </div>
 
 
