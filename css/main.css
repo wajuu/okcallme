@@ -283,7 +283,8 @@ body {
     width: 130px;
 }
 .subMenu3 li{
-    width: 110px;
+    width: 105px;
+    padding: 10px 5px;
 }
 .subMenu li a{
     width: 120px;
