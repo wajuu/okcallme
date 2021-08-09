@@ -2322,6 +2322,12 @@ body {
     font-size: 1em;
 }
 
+.shoppingCart #edit{
+    font-size: 1em;
+    padding: 5px ;
+    margin-top: 2px;
+}
+
 .shoppingCart #productImage {
     height: 100px;
 }
@@ -2341,7 +2347,7 @@ body {
     cursor: pointer;
 }
 
-.basketWrap #delete {
+.basketWrap #delete, .basketWrap #edit {
     background: #fff;
     cursor: pointer;
 }
