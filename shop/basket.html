@@ -4,35 +4,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="index, follow">
 
     <!-- 오픈그래프 //-->
     <meta property="og:title" content="(주)꿈과행복,콜신져">
     <meta property="og:type" content="website">
     <meta property="og:site_name" content="(주)꿈과행복,콜신져">
-    <meta property="og:url" content="http://www.okcallme.com">
+    <meta property="og:url" content="">
     <meta property="og:description" content="(주)꿈과행복 콜신져 방문을 환영합니다.">
-    <meta property="og:image" content="http://nargo.okcallme.com/okcallme/img/logo2.png">
+    <meta property="og:image" content="">
 
     <link rel="stylesheet" type="text/css" media="screen and (max-width:766px)" href="../css/phone.css">
     <link rel="stylesheet" type="text/css" media="screen and (min-width:767px)" href="../css/main.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Gugi&display=swap" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="../js/motion.js"></script>
     <script src="https://kit.fontawesome.com/115e3e852e.js" crossorigin="anonymous"></script>
-
-
-
-
-
-
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="../js/motion.js"></script>
 
     <title>콜신져</title>
-
-
 
 </head>
 
@@ -68,12 +58,10 @@
                         </li>
                         <li class="main-menu"><a href="../2-2.html">사용방법</a>
                             <ul class="dropdown">
-                                <!-- <li><a class="s-text" href="./2-1.html">무료체험 방법</a></li> -->
                                 <li><a class="s-text" href="./2-2.html">요금 및 할인</a></li>
                                 <li><a class="s-text" href="./2-3.html">주변장치 소개</a></li>
                             </ul>
                         </li>
-                        <!-- <li class="main-menu"><a href="./3-1.html">프로그램 설치</a></li> -->
                         <li class="main-menu"><a href="../4-1.html">배달/주문 연동</a>
                             <ul class="dropdown">
                                 <li><a class="s-text" href="../4-1.html">배달앱/주문대행</a></li>
@@ -93,10 +81,41 @@
                     </ul>
                 </div>
             </div>
+            <div class="phone-main deskNo">
+                <div class="header">
+                    <div class="logo-box" id="logo-box">
+                        <a href="../index.html"><img src="../img/logo.png" alt="logo"></a>
+                    </div>
+                    <div class="menu_btn"><a href="#">
+                            <img src="../img/mobile/menu.png" alt="menu">
+                        </a>
+                    </div>
+                </div>
 
+                <div class="menu_bg"></div>
+                <div class="sidebar_menu">
+                    <div class="close_btn"><a href="#">
+                            <img src="../img/mobile/close.png" alt="menu">
+                        </a>
+                    </div>
+                    <ul class="menu_wrap">
+                        <li><a class="m-text" href="../1-1.html">콜신져 POS</a></li>
+                        <li><a class="m-text" href="../1-2.html">다른 프로그램</a></li>
+                        <li><a class="m-text" href="../2-2.html">사용 방법</a>
+                            <ul>
+                                <li><a class="s-text" href="../2-2.html">요금 및 할인</a></li>
+                                <li><a class="s-text" href="../2-3.html">주변 장치 소개</a></li>
+                            </ul>
+                        </li>
+                        <li><a class="m-text" href="../4-1.html">배달/주문 연동</a></li>
+                        <li><a class="m-text" href="../support.html">고객센터</a></li>
+                        <li><a class="m-text" href="../shop.html">쇼핑몰</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
 
-        
+
         <div id="container">
             <div class="shop-box">
                 <div class="shop-wrapper">
@@ -145,25 +164,32 @@
                         <div class="shoppingCart">
                             <table class="cartTable">
                                 <tr>
-                                    <th>상품</th>
+                                    <th class="phoneNo">상품</th>
                                     <th>제품명</th>
-                                    <th>모델명</th>
+                                    <th class="phoneNo">모델명</th>
                                     <th>판매가격</th>
                                     <th>수량</th>
                                     <th>삭제</th>
                                 </tr>
                                 <tr>
-                                    <td><img id="productImage" src="" alt="상품이미지"></td>  <!--이미지높이 100px-->
+                                    <td class="phoneNo"><img id="productImage" src="" alt="상품이미지"></td>
+                                    <!--이미지높이 100px-->
                                     <td><span id="productName"></span></td>
-                                    <td><span id="productCode"></span></td>
-                                    <td><span id="productPrice"></span><p>( <span id="deliveryFee" ></span> )</p></td>
+                                    <td class="phoneNo"><span id="productCode"></span></td>
+                                    <td><span id="productPrice"></span> <br>
+                                        <p>( <span id="deliveryFee"></span> )</p>
+                                    </td>
                                     <td>
                                         <div class="count-icon">
                                             <div>
                                                 <div class="count-box">
-                                                    <button type="button" class="minus"><i class="fas fa-minus"></i></button>
-                                                    <input type="number" class="numBox" min="1" max="99" value="1" readonly style="width:40px;font-size: 1.2em; text-align: center; background-color: #dedede; border-radius: 50px;"/>
-                                                    <button type="button" class="plus"><i class="fas fa-plus"></i></button>
+                                                    <button type="button" class="minus"><i
+                                                            class="fas fa-minus"></i></button>
+                                                    <input type="number" class="numBox" min="1" max="99" value="1"
+                                                        readonly
+                                                        style="width:40px;font-size: 1.2em; text-align: center; background-color: #dedede; border-radius: 50px;" />
+                                                    <button type="button" class="plus"><i
+                                                            class="fas fa-plus"></i></button>
                                                 </div>
                                             </div>
                                         </div>
@@ -194,7 +220,7 @@
 
                     </div>
 
-                    
+
                 </div>
             </div>
         </div>
@@ -246,52 +272,5 @@
             </div>
         </footer>
     </div>
-
-    <!-- javascript -->
-    <div id="script" style="display: none;">
-    <!--go-up-->
-    <script>
-        $(window).scroll(function () {
- var quickHeight=$(document).scrollTop(); //스크롤 높이가 500 이상이면 나타나기
- if (200 <= quickHeight ) {
-   $('.go-top').css('display','block');
-  }else {
-    $('.go-top').css('display','none');
-  }
-});
-
-$('.go-top').click(function(){//위로가기 버튼을 클릭했을때
-  $('html, body').animate({
-    scrollTop: '0'
-  }, 800);
-});
-    </script>
-    <!-- 수량카운트 -->
-    <script>
-        $(".plus").click(function(){
-         var num = $(".numBox").val();
-         var plusNum = Number(num) + 1;
-         
-         if(plusNum >= 99) {
-          $(".numBox").val(num);
-         } else {
-          $(".numBox").val(plusNum);          
-         }
-        });
-        
-        $(".minus").click(function(){
-         var num = $(".numBox").val();
-         var minusNum = Number(num) - 1;
-         
-         if(minusNum <= 0) {
-          $(".numBox").val(num);
-         } else {
-          $(".numBox").val(minusNum);          
-         }
-        });
-       </script>
-    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    </div>
-
 
 </body>

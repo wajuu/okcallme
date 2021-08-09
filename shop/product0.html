@@ -121,13 +121,13 @@
                 <div class="shop-wrapper">
                     <div class="shop-submenu">
                         <ul class="s-text">
-                            <li><a href="../shop-cid.html">CID발신번호장치</a></li>
+                            <li><a class="selected2" href="../shop-cid.html">CID발신번호장치</a></li>
                             <li><a href="../shop-print.html">영수증프린터</a></li>
                             <li><a href="../shop-pos.html">POS시스템</a></li>
                             <li><a href="../shop-card.html">카드 단말기</a></li>
                             <li><a href="../shop-etc-1.html">기타 장치</a></li>
                             <li><a href="../shop-etc-2.html">기타 업소용품</a></li>
-                            <li><a class="selected2" href="../shop-point.html">마일리지</a></li>
+                            <li><a href="../shop-point.html">마일리지</a></li>
                             <li><a href="../shop-message.html">메세징 쿠폰</a></li>
                             <li><a href="../shop-callsenger.html">콜신져 사용료 결제</a></li>
                         </ul>
@@ -149,10 +149,10 @@
                     </div>
                     <div class="shop-title-box">
                         <div class="shop-s-title shop-s-title-left">
-                            <p class="point-text">마일리지</p>
+                            <p class="point-text" id="listName">CID 발신번호장치</p>
                         </div>
                         <div>
-                            <a href="../shop-point.html">
+                            <a href="../shop-cid.html">
                                 <h6 class="s-text"><i class="fas fa-arrow-circle-left"></i>&nbsp;목록으로 돌아가기</h6>
                             </a>
                         </div>
@@ -162,10 +162,12 @@
                     <div class="shop-list shop-detail">
                         <div class="section-list">
                             <div class="a-box-list">
-                                <div>
-                                    <img style="box-shadow: 2px 0px 7px rgb(163, 162, 162);"
-                                        src="../img/shopping/마일리지10000.png" alt="shop">
-                                </div>
+                                <a onclick="openDetail();" class="pic-area" href="#">
+                                    <div>
+                                        <div class="hover-icon hover-icon2"><i class="fas fa-search"></i></div>
+                                        <img class="productPhoto" src="#" alt="shop">
+                                    </div>
+                                </a>
                                 <div class="title-area">
                                     <div class="basket-icon buy-icon"><a href="">
                                             <div><i class="fas fa-coins"></i>
@@ -177,29 +179,33 @@
                                             </div>
                                             <span>장바구니</span>
                                         </a></div>
+                                    <div class="count-icon">
+                                        <div>
+                                            <span>수량</span>
+                                            <div class="count-box">
+                                                <button type="button" class="minus"><i
+                                                        class="fas fa-minus"></i></button>
+                                                <input type="number" class="numBox" min="1" max="99" value="1" readonly
+                                                    style="width:50px;font-size: 1.8em; text-align: center; background-color: #dedede; border-radius: 50px;" />
+                                                <button type="button" class="plus"><i class="fas fa-plus"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>
 
-                                    <h2 class="m-text">마일리지 10,000점</h2>
-                                    <h2 class="m-text" style="opacity: 0;">()</h2>
+                                    <h2 class="m-text"><span class="productName"></span></h2>
+                                    <h2 class="m-text"><span class="productName2"></span></h2>
                                     <h6 class="s-text">-</h6>
-                                    <h6 class="xs-text">콜신져 마일리지 선불카드</h6>
-                                    <h2 class="m-text price">10,000원</h2>
+                                    <h6 class="xs-text">모델명 : <span class="productModel"></span></h6>
+                                    <h2 class="m-text price"><span class="price"></span>원</h2>
                                 </div>
                             </div>
                         </div>
-                        <div class=" detail-pic">
+                        <div class="detail-pic">
                             <div>
                                 <p class="m-text">제품상세</p>
                             </div>
                             <div class="main-line3"></div>
-                            <div class="s-text">
-                                (주)꿈과행복의 마일리지 선불카드는 1만점, 3만점, 5만점, 10만점 4종류가 있습니다. <br>
-
-                                마일리지 선불카드를 구매하시면, 고객님의 마일리지가 적립되며, 별도의 카드로 발송되지는 않습니다. <br>
-                                마일리지 선불카드는 구매하신 후 바로 이용하실수 있습니다.<br>
-                                마일리지 선불카드는 UMS서비스(문자 메세지, 음성 메세지, FAX 서비스) 및 쇼핑몰에서 이용가능하며,<br>
-                                (주)꿈과행복 온라인(www.okcallme.com)에서만 사용 가능합니다.<br>
-                                마일리지 선불카드는 카드 또는 무통장 입금, 실시간 계좌이체 등으로 구매가 가능합니다.<br>
-                            </div>
+                            <img class="productDetail" src="#" alt="details">
                         </div>
                         <div class="detail-info">
                             <div>
@@ -289,12 +295,10 @@
 
     <!-- javascript -->
     <div id="script" style="display: none;">
-
         <!-- 상품 확대 사진 -->
         <script>
             function openDetail() {
-                var popup = window.open('./detail/product5-5-3.html', '제품 상세 이미지',
-                    'width=650px, height=500px, scrollbars=no');
+                var popup = window.open('#', '제품 상세 이미지','width=650px, height=500px, scrollbars=no');
             }
         </script>
     </div>
