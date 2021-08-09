@@ -5,18 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    
+
     <link rel="stylesheet" type="text/css" media="screen and (max-width:766px)" href="../css/phone.css">
     <link rel="stylesheet" type="text/css" media="screen and (min-width:767px)" href="../css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="../js/motion.js"></script>
     <script src="https://kit.fontawesome.com/115e3e852e.js" crossorigin="anonymous"></script>
-
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="../js/motion.js"></script>
 
     <title>콜신져</title>
-
-
-
 </head>
 
 <body>
@@ -131,28 +128,38 @@
                         <p class="point-text">회원 탈퇴</p>
                     </div>
                     <div class="warning-delete">
-                        <h2>회원 탈퇴 시 자동이체 신청 고객님께서는 <br> 
-                        반드시 당사로 <strong>자동이체 해지요청</strong>을 해주시기 바랍니다.</h2>
+                        <h2>회원 탈퇴 시 자동이체 신청 고객님께서는 <br>
+                            반드시 당사로 <strong>자동이체 해지요청</strong>을 해주시기 바랍니다.</h2>
                         <h1>1566-2636 : 결제담당자</h1>
                     </div>
                     <div class="infoBody">
                         <table class="delete-table">
                             <tr>
                                 <td class="number">01</td>
-                                <td class="s-text"><p>회원탈퇴를 하시면 보유하고 있는 마일리지는 모두 자동소멸 됩니다.
-                                    아울러 탈퇴시 고객님의 데이터는 3개월간만 보존되며 이후에는 삭제됩니다.</p></td>
+                                <td class="s-text">
+                                    <p>회원탈퇴를 하시면 보유하고 있는 마일리지는 모두 자동소멸 됩니다.
+                                        아울러 탈퇴시 고객님의 데이터는 3개월간만 보존되며 이후에는 삭제됩니다.</p>
+                                </td>
                             </tr>
                             <tr>
                                 <td class="number">02</td>
-                                <td class="s-text"><p>재가입은 회원탈퇴 후 신규가입 회원으로 처리됩니다.</p></td>
+                                <td class="s-text">
+                                    <p>재가입은 회원탈퇴 후 신규가입 회원으로 처리됩니다.</p>
+                                </td>
                             </tr>
                             <tr>
                                 <td class="number">03</td>
-                                <td class="s-text"><p>일정기간(신규회원 이벤트 진행기간)동안 재가입 여부 판단을 목적으로 고객님의 최소정보(성명과 고객번호)를 보존합니다.</p></td>
+                                <td class="s-text">
+                                    <p>일정기간(신규회원 이벤트 진행기간)동안 재가입 여부 판단을 목적으로 고객님의 최소정보(성명과 고객번호)를 보존합니다.</p>
+                                </td>
                             </tr>
                             <tr>
                                 <td class="number">04</td>
-                                <td class="s-text"><p>고객님의 거래내역은 전자상거래 등에서의 소비자보호에 관한 법률 제 6조 및 동법시행령 제 6조에 의거하여 표시 및 광고에 관한 기록은 6개월, 계약 또는 청약철회 등에 관한 기록은 5년, 재화 공급 등의 공급에 관한 기록은 5년, 소비자 불만 또는 분쟁처리에 관한 기록은 3년간 기록됩니다.</p></td>
+                                <td class="s-text">
+                                    <p>고객님의 거래내역은 전자상거래 등에서의 소비자보호에 관한 법률 제 6조 및 동법시행령 제 6조에 의거하여 표시 및 광고에 관한 기록은 6개월,
+                                        계약 또는 청약철회 등에 관한 기록은 5년, 재화 공급 등의 공급에 관한 기록은 5년, 소비자 불만 또는 분쟁처리에 관한 기록은 3년간
+                                        기록됩니다.</p>
+                                </td>
                             </tr>
                         </table>
                         <button id="agree">동의합니다</button>
@@ -161,7 +168,7 @@
                 </div>
             </div>
         </div>
- 
+
     </div>
 
     <!-- 고정 사이드 메뉴 -->
@@ -265,145 +272,4 @@
             </div>
         </footer>
     </div>
-
-    <!-- javascript -->
-    <div id="script" style="display: none;">
-
-    <!--go-up-->
-    <script>
-        $(window).scroll(function () {
-            var quickHeight = $(document).scrollTop(); //스크롤 높이가 500 이상이면 나타나기
-            if (200 <= quickHeight) {
-                $('.go-top').css('display', 'block');
-            } else {
-                $('.go-top').css('display', 'none');
-            }
-        });
-
-        $('.go-top').click(function () { //위로가기 버튼을 클릭했을때
-            $('html, body').animate({
-                scrollTop: '0'
-            }, 800);
-        });
-    </script>
-        <!-- rolling banner -->
-        <script>
-            //current position
-            var pos = 0;
-            //number of slides
-            var totalSlides = $('#slider-wrap ul li').length;
-            //get the slide width
-            var sliderWidth = $('#slider-wrap').width();
-
-
-            $(document).ready(function () {
-
-
-                /*****************
-                 BUILD THE SLIDER
-                *****************/
-                //set width to be 'x' times the number of slides
-                $('#slider-wrap ul#slider').width(sliderWidth * totalSlides);
-
-                //next slide 	
-                $('#next').click(function () {
-                    slideRight();
-                });
-
-                //previous slide
-                $('#previous').click(function () {
-                    slideLeft();
-                });
-
-
-
-                /*************************
-                 //*> OPTIONAL SETTINGS
-                ************************/
-                //automatic slider
-                var autoSlider = setInterval(slideRight, 3000);
-
-                //for each slide 
-                $.each($('#slider-wrap ul li'), function () {
-
-                    //create a pagination
-                    var li = document.createElement('li');
-                    $('#pagination-wrap ul').append(li);
-                });
-
-                //counter
-                countSlides();
-
-                //pagination
-                pagination();
-
-                //hide/show controls/btns when hover
-                //pause automatic slide when hover
-                $('#slider-wrap').hover(
-                    function () {
-                        $(this).addClass('active');
-                        clearInterval(autoSlider);
-                    },
-                    function () {
-                        $(this).removeClass('active');
-                        autoSlider = setInterval(slideRight, 3000);
-                    }
-                );
-
-
-
-            }); //DOCUMENT READY
-
-
-
-            /***********
-             SLIDE LEFT
-            ************/
-            function slideLeft() {
-                pos--;
-                if (pos == -1) {
-                    pos = totalSlides - 1;
-                }
-                $('#slider-wrap ul#slider').css('left', -(sliderWidth * pos));
-
-                //*> optional
-                countSlides();
-                pagination();
-            }
-
-
-            /************
-             SLIDE RIGHT
-            *************/
-            function slideRight() {
-                pos++;
-                if (pos == totalSlides) {
-                    pos = 0;
-                }
-                $('#slider-wrap ul#slider').css('left', -(sliderWidth * pos));
-
-                //*> optional 
-                countSlides();
-                pagination();
-            }
-
-
-
-
-            /************************
-             //*> OPTIONAL SETTINGS
-            ************************/
-            function countSlides() {
-                $('#counter').html(pos + 1 + ' / ' + totalSlides);
-            }
-
-            function pagination() {
-                $('#pagination-wrap ul li').removeClass('active');
-                $('#pagination-wrap ul li:eq(' + pos + ')').addClass('active');
-            }
-        </script>
-        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    </div>
-
-
 </body>

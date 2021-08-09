@@ -5,18 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    
+
     <link rel="stylesheet" type="text/css" media="screen and (max-width:766px)" href="../css/phone.css">
     <link rel="stylesheet" type="text/css" media="screen and (min-width:767px)" href="../css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="../js/motion.js"></script>
     <script src="https://kit.fontawesome.com/115e3e852e.js" crossorigin="anonymous"></script>
-
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="../js/motion.js"></script>
 
     <title>콜신져</title>
-
-
-
 </head>
 
 <body>
@@ -152,6 +149,7 @@
                                 <td id="depositAmount"></td>
                                 <td id="requestName"></td>
                             </tr>
+                            <!-- 내역 없는경우 -->
                             <tr id="noRecord">
                                 <td colspan="6">
                                     <p>무통장 입금신청 내역이 없습니다.</p>
@@ -181,6 +179,7 @@
                                 <td id="depositAmount"></td>
                                 <td id="requestName"></td>
                             </tr>
+                            <!-- 내역 없는경우 -->
                             <tr id="noRecord">
                                 <td colspan="6">
                                     <p>무통장 입금신청 내역이 없습니다.</p>
@@ -193,12 +192,12 @@
                             <div id="listNum"><a href=""><span>1</span></a></div>
                             <button><i class="fas fa-angle-double-right"></i></button>
                         </div>
-    
+
                     </div>
                 </div>
             </div>
         </div>
- 
+
     </div>
 
     <!-- 고정 사이드 메뉴 -->
@@ -302,145 +301,5 @@
             </div>
         </footer>
     </div>
-
-    <!-- javascript -->
-    <div id="script" style="display: none;">
-
-    <!--go-up-->
-    <script>
-        $(window).scroll(function () {
-            var quickHeight = $(document).scrollTop(); //스크롤 높이가 500 이상이면 나타나기
-            if (200 <= quickHeight) {
-                $('.go-top').css('display', 'block');
-            } else {
-                $('.go-top').css('display', 'none');
-            }
-        });
-
-        $('.go-top').click(function () { //위로가기 버튼을 클릭했을때
-            $('html, body').animate({
-                scrollTop: '0'
-            }, 800);
-        });
-    </script>
-        <!-- rolling banner -->
-        <script>
-            //current position
-            var pos = 0;
-            //number of slides
-            var totalSlides = $('#slider-wrap ul li').length;
-            //get the slide width
-            var sliderWidth = $('#slider-wrap').width();
-
-
-            $(document).ready(function () {
-
-
-                /*****************
-                 BUILD THE SLIDER
-                *****************/
-                //set width to be 'x' times the number of slides
-                $('#slider-wrap ul#slider').width(sliderWidth * totalSlides);
-
-                //next slide 	
-                $('#next').click(function () {
-                    slideRight();
-                });
-
-                //previous slide
-                $('#previous').click(function () {
-                    slideLeft();
-                });
-
-
-
-                /*************************
-                 //*> OPTIONAL SETTINGS
-                ************************/
-                //automatic slider
-                var autoSlider = setInterval(slideRight, 3000);
-
-                //for each slide 
-                $.each($('#slider-wrap ul li'), function () {
-
-                    //create a pagination
-                    var li = document.createElement('li');
-                    $('#pagination-wrap ul').append(li);
-                });
-
-                //counter
-                countSlides();
-
-                //pagination
-                pagination();
-
-                //hide/show controls/btns when hover
-                //pause automatic slide when hover
-                $('#slider-wrap').hover(
-                    function () {
-                        $(this).addClass('active');
-                        clearInterval(autoSlider);
-                    },
-                    function () {
-                        $(this).removeClass('active');
-                        autoSlider = setInterval(slideRight, 3000);
-                    }
-                );
-
-
-
-            }); //DOCUMENT READY
-
-
-
-            /***********
-             SLIDE LEFT
-            ************/
-            function slideLeft() {
-                pos--;
-                if (pos == -1) {
-                    pos = totalSlides - 1;
-                }
-                $('#slider-wrap ul#slider').css('left', -(sliderWidth * pos));
-
-                //*> optional
-                countSlides();
-                pagination();
-            }
-
-
-            /************
-             SLIDE RIGHT
-            *************/
-            function slideRight() {
-                pos++;
-                if (pos == totalSlides) {
-                    pos = 0;
-                }
-                $('#slider-wrap ul#slider').css('left', -(sliderWidth * pos));
-
-                //*> optional 
-                countSlides();
-                pagination();
-            }
-
-
-
-
-            /************************
-             //*> OPTIONAL SETTINGS
-            ************************/
-            function countSlides() {
-                $('#counter').html(pos + 1 + ' / ' + totalSlides);
-            }
-
-            function pagination() {
-                $('#pagination-wrap ul li').removeClass('active');
-                $('#pagination-wrap ul li:eq(' + pos + ')').addClass('active');
-            }
-        </script>
-        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    </div>
-
 
 </body>

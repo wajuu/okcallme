@@ -5,18 +5,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex, nofollow">
-    
+
     <link rel="stylesheet" type="text/css" media="screen and (max-width:766px)" href="../css/phone.css">
     <link rel="stylesheet" type="text/css" media="screen and (min-width:767px)" href="../css/main.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="../js/motion.js"></script>
     <script src="https://kit.fontawesome.com/115e3e852e.js" crossorigin="anonymous"></script>
-
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="../js/motion.js"></script>
 
     <title>콜신져</title>
-
-
-
 </head>
 
 <body>
@@ -131,7 +128,7 @@
                         <p class="point-text">결제 내역</p>
                     </div>
                     <div class="infoText">
-                        <h2>고객님의 총 결제금액은 <span id="totalpayment" style="color: #f00;">20,000 원</span> 입니다.</h2>
+                        <h2>고객님의 총 결제금액은 <span id="totalpayment" style="color: #f00;">0 원</span> 입니다.</h2>
                         <p>- ㈜꿈과행복의 전자세금계산서 발급방식은 전산시스템을 통한 자동발급방식으로 고객결제 후 7~10일 안에 발행됩니다.</p>
                         <p>- 전자세금계산서의 확인이 불가한 경우 전자세금계산서 발행예정월의 익월 10일까지 본사(1566-2636)로 연락바랍니다</p>
                     </div>
@@ -153,23 +150,25 @@
                                 <td id="purchaseQuantity"></td>
                                 <td id="purchaseList"></td>
                             </tr>
+                            <!-- 내역 없는경우 -->
                             <tr id="noRecord">
                                 <td colspan="6">
                                     <p>결제내역이 없습니다.</p>
                                 </td>
                             </tr>
                         </table>
-                         <!-- 내역 많을 때 화살표-->
+                        <!-- 내역 많을 때 화살표-->
                         <div class="pageArrow">
                             <button><i class="fas fa-angle-double-left"></i></button>
                             <div id="listNum"><a href=""><span>1</span></a></div>
                             <button><i class="fas fa-angle-double-right"></i></button>
                         </div>
-    
+
                         <div class="warning">
                             <h2>**주의사항</h2>
                             <p>1. 전자세금계산서 발행 결과는 사업자정보에 입력된 이메일로 발송되며,
-                                사업자정보수정사항이 있을 시 <br> &nbsp;&nbsp; <a href="info1.html">홈페이지 나의 정보보기> 사업자정보수정</a>에서 변경바랍니다.</p>
+                                사업자정보수정사항이 있을 시 <br> &nbsp;&nbsp; <a href="info1.html">홈페이지 나의 정보보기> 사업자정보수정</a>에서
+                                변경바랍니다.</p>
                             <p>2. 본인의 모든 세금계산서 발행 현황(매입매출)은 국세청 홈택스 홈페이지에서 조회가능합니다.
                                 <br> &nbsp;&nbsp;<a href="www.hometax.go.kr">(홈텍스 홈페이지 www.hometax.go.kr)</a></p>
                             <p>3. 부가세분기 마감 이후 전자세금계산서의 발행 및 수정은 불가합니다.</p>
@@ -184,7 +183,7 @@
                 </div>
             </div>
         </div>
- 
+
     </div>
 
     <!-- 고정 사이드 메뉴 -->
@@ -288,145 +287,5 @@
             </div>
         </footer>
     </div>
-
-    <!-- javascript -->
-    <div id="script" style="display: none;">
-
-    <!--go-up-->
-    <script>
-        $(window).scroll(function () {
-            var quickHeight = $(document).scrollTop(); //스크롤 높이가 500 이상이면 나타나기
-            if (200 <= quickHeight) {
-                $('.go-top').css('display', 'block');
-            } else {
-                $('.go-top').css('display', 'none');
-            }
-        });
-
-        $('.go-top').click(function () { //위로가기 버튼을 클릭했을때
-            $('html, body').animate({
-                scrollTop: '0'
-            }, 800);
-        });
-    </script>
-        <!-- rolling banner -->
-        <script>
-            //current position
-            var pos = 0;
-            //number of slides
-            var totalSlides = $('#slider-wrap ul li').length;
-            //get the slide width
-            var sliderWidth = $('#slider-wrap').width();
-
-
-            $(document).ready(function () {
-
-
-                /*****************
-                 BUILD THE SLIDER
-                *****************/
-                //set width to be 'x' times the number of slides
-                $('#slider-wrap ul#slider').width(sliderWidth * totalSlides);
-
-                //next slide 	
-                $('#next').click(function () {
-                    slideRight();
-                });
-
-                //previous slide
-                $('#previous').click(function () {
-                    slideLeft();
-                });
-
-
-
-                /*************************
-                 //*> OPTIONAL SETTINGS
-                ************************/
-                //automatic slider
-                var autoSlider = setInterval(slideRight, 3000);
-
-                //for each slide 
-                $.each($('#slider-wrap ul li'), function () {
-
-                    //create a pagination
-                    var li = document.createElement('li');
-                    $('#pagination-wrap ul').append(li);
-                });
-
-                //counter
-                countSlides();
-
-                //pagination
-                pagination();
-
-                //hide/show controls/btns when hover
-                //pause automatic slide when hover
-                $('#slider-wrap').hover(
-                    function () {
-                        $(this).addClass('active');
-                        clearInterval(autoSlider);
-                    },
-                    function () {
-                        $(this).removeClass('active');
-                        autoSlider = setInterval(slideRight, 3000);
-                    }
-                );
-
-
-
-            }); //DOCUMENT READY
-
-
-
-            /***********
-             SLIDE LEFT
-            ************/
-            function slideLeft() {
-                pos--;
-                if (pos == -1) {
-                    pos = totalSlides - 1;
-                }
-                $('#slider-wrap ul#slider').css('left', -(sliderWidth * pos));
-
-                //*> optional
-                countSlides();
-                pagination();
-            }
-
-
-            /************
-             SLIDE RIGHT
-            *************/
-            function slideRight() {
-                pos++;
-                if (pos == totalSlides) {
-                    pos = 0;
-                }
-                $('#slider-wrap ul#slider').css('left', -(sliderWidth * pos));
-
-                //*> optional 
-                countSlides();
-                pagination();
-            }
-
-
-
-
-            /************************
-             //*> OPTIONAL SETTINGS
-            ************************/
-            function countSlides() {
-                $('#counter').html(pos + 1 + ' / ' + totalSlides);
-            }
-
-            function pagination() {
-                $('#pagination-wrap ul li').removeClass('active');
-                $('#pagination-wrap ul li:eq(' + pos + ')').addClass('active');
-            }
-        </script>
-        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
-    </div>
-
 
 </body>
