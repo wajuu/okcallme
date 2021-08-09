@@ -1853,7 +1853,9 @@ body {
 .infoBox .info-payment {
     width: 90vw;
 }
-
+.infoBox .info-sBox{
+    width: 90vw;
+}
 .infoBox .title {
     padding: 50px 0 30px 0;
 }
@@ -1883,7 +1885,7 @@ body {
 }
 
 .infoBody .infoTable {
-    width: 40vw;
+    width: 90vw;
     text-align: center;
     border-collapse: collapse;
     font-size: 0.9em;
@@ -1955,7 +1957,7 @@ body {
 }
 
 .infoBox .paymentTable {
-    width: 55vw;
+    width: 90vw;
     text-align: center;
     border-collapse: collapse;
     font-size: 0.9em;
