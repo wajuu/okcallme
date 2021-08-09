@@ -1300,6 +1300,7 @@ body {
     height: 100px;
     padding-bottom: 0;
     display: inline-flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
@@ -1310,6 +1311,14 @@ body {
     width: 30px;
     height: 30px;
     font-size: 0.8em;
+}
+.shoppingCart #edit, .shoppingCart #delete{
+    font-size: 1em;
+    padding: 5px ;
+    background: #fff;
+}
+.shoppingCart #edit{
+    margin-top: 5px;
 }
 .shoppingCart .total span{
     padding: 10px;
@@ -1473,9 +1482,10 @@ body {
     height: auto;
 }
 .shop-list .pointBox img{
-    width: 40vw;
+    width: 140px;
     height: auto;
-    margin: 0;
+    margin: 0px;
+    padding: 0px;
 }
 
 .shop-list .xs-text {
@@ -1534,6 +1544,9 @@ body {
 
 .a-box-mobile {
     flex-direction: column;
+}
+.a-box-mobile img{
+    width: 250px;
 }
 
 .a-box-flex a {
