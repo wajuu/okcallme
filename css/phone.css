@@ -715,28 +715,30 @@ body {
     font-size: 1.5em;
 }
 
-.main-wrapper .phoneProMenu {
+.main-wrapper .phoneProMenu, #container .phoneProMenu {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     width: 100vw;
     padding: 20px 0 40px 0;
+    text-align: center;
 }
 
-.main-wrapper .phoneProMenu table {
+.main-wrapper .phoneProMenu table, #container .phoneProMenu  table {
     border-spacing: 7px;
 }
 
-.main-wrapper .phoneProMenu table td {
+.main-wrapper .phoneProMenu table td , #container .phoneProMenu table td{
     height: 30px;
     padding: 5px 8px;
     background: #448aca;
     opacity: 0.8;
 }
 
-.main-wrapper .phoneProMenu table a {
+.main-wrapper .phoneProMenu table a , #container .phoneProMenu table a {
     color: #fff;
 }
+
 
 /*사용방법*/
 
